@@ -1,8 +1,0 @@
-************************************************************
-********* hercules12  ****** JOB_ID= 524460   *************
-************************************************************
-/var/spool/gridengine/execd/hercules12/job_scripts/524460: 13: /var/spool/gridengine/execd/hercules12/job_scripts/524460: /soft/trinityrnaseq-2.4.0: Permission denied
-/var/spool/gridengine/execd/hercules12/job_scripts/524460: 14: /var/spool/gridengine/execd/hercules12/job_scripts/524460: /users-d1/shinojosa/Mammillaria_Illumina/Mammilaria/Trancriptoma/Disocactus/: Permission denied
-/var/spool/gridengine/execd/hercules12/job_scripts/524460: 15: /var/spool/gridengine/execd/hercules12/job_scripts/524460: /users-d1/shinojosa/Mammillaria_Illumina/Mammilaria/Trancriptoma/Disocactus/DS1-13PC_1.fq: Permission denied
-/var/spool/gridengine/execd/hercules12/job_scripts/524460: 16: /var/spool/gridengine/execd/hercules12/job_scripts/524460: /users-d1/shinojosa/Mammillaria_Illumina/Mammilaria/Trancriptoma/Disocactus/DS1-13PC_2.fq: Permission denied
-/var/spool/gridengine/execd/hercules12/job_scripts/524460: 21: /var/spool/gridengine/execd/hercules12/job_scripts/524460: /Trinity: not found
