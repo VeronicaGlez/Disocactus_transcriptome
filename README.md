@@ -5,7 +5,7 @@ ___
 
 In this repository you will find RNA-seq data analysis and scripts of the novo assambly and annotation from cacti flower development of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii*.
 
-![D.speciosus](/home/cris/Documentos/EpiDiso/Disocactus_transcriptome/D.speciosus.JPG)
+![D.speciosus](/D.speciosus.JPG)
 
 **Fig. 1. flower anthesis of *D. speciosus*** photo by Isaura Rosas Reinhold
 
