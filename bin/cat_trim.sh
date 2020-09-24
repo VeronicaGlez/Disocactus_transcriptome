@@ -1,6 +1,6 @@
 #Script to concatenate files
 # This script is for cat 36 samples of D. eichlamii.
-# Run this script from directory ~/bin/  and  the sequences they are in ~/data/DE/trim/unzip
+# Run this script from directory ~/bin/  and  the sequences they are in ~/data/DE/trim/
 #!/bin/sh
 
 #make out directory
