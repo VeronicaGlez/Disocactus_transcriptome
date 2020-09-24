@@ -1,21 +1,21 @@
 #Script to concatenate files
-# This script is for cat 36 samples of D. speciosus.
-# Run this script from directory ~/bin/  and  the sequences they are in ~/data/DS/trim/unzip
+# This script is for cat 36 samples of D. eichlamii.
+# Run this script from directory ~/bin/  and  the sequences they are in ~/data/DE/trim/unzip
 #!/bin/sh
 
 #make out directory
 
-mkdir -p /media/isau/Isaura/EpiDiso/out/DS_cat
+mkdir -p ../out/DE_cat
 
 #cat samples
 
-for i in `ls /media/isau/Isaura/EpiDiso/data/secuencias/DS/unzip | grep ".fq" | sed "s/_1_val_1.fq//"| sed "s/_2_val_2.fq//" | uniq` ; do
+for i in `ls ../data/DE/ | grep ".fq" | sed "s/_1_val_1.fq//"| sed "s/_2_val_2.fq//" | uniq` ; do
 
 echo ${i}
 
-cat /media/isau/Isaura/EpiDiso/data/secuencias/DS/unzip/${i}_1_val_1.fq > DS_cat_trim_1.fq
+cat ../data/secuencias/DE/${i}_1_val_1.fq > DE_cat_trim_1.fq
 
-cat /media/isau/Isaura/EpiDiso/data/secuencias/DS/unzip/${i}_2_val_2.fq > DS_cat_trim_2.fq
+cat ../data/secuencias/DE/${i}_2_val_2.fq > DE_cat_trim_2.fq
 
 done
 
@@ -23,5 +23,5 @@ done
 #move cat files to out directory
 
 
-mv DS_cat_trim_*.fq  /media/isau/Isaura/EpiDiso/out/DS_cat
+mv DE_cat_trim_*.fq  ../out/DE_cat
 
