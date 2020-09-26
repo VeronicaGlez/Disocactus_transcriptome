@@ -1,71 +1,161 @@
-# Comparative transcriptomics of flower development in Disocactus species (Hylocereae,Cactaceae)
+## Comparative transcriptomics of flower development in *Disocactus* species (Hylocereae,Cactaceae)
 
-## Background
+---
+
+#### Background
 
 *Disocactus* is a genus conformed by epifitic and epilitic cacti.
+The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group altought it contrastan floral morphology. The
+
+![phylogenie](phylogenie_morpho.jpg)
+**Fig.1.** Phylogenie of Disocactus genus and flower morphology diversity
+
+![distribution](distribution.jpg)
+**Fig. 2.** Distribution of *Disocactus*
+
+
+---
 
 
 
+#### Objective
 
+Identification of genetic expresion patterns during flower development in two *Disocactus* species   and its relation with the morphologic diversity in the group.
 
-## Objective
+#### Particular objectives
 
-*de novo* assambly of RNA-seq
+1. Ensamble de novo y anotación de transcriptomas de dos especies del género Disocactus.
+2. Determinar y comparar los patrones de expresión génica en tejido floral (perianto, androceo y estilo-estigma) y tejido pericarpelar en cada uno de los tres estadíos de desarrollo, en dos especies de Disocactus por medio del uso de transcriptomas.
+3. Selección de genes involucrados en el desarrollo de las flores para hacer análisis de transcriptómica comparada.
 
+---
 
-## Material and methods
+### Material and methods
+
 ___
 
 
-### 1. Material colection
+#### 1. Material colection
 
+Three differente developmental stages of flower buds of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic cacti colection of the Botanical garden, UNAM.
 
-### 2. RNA extraction
+![material](material.jpg)
+
+---
+
+#### 2. RNA extraction
 
 
 ![RNA-extraction](rna_extraction.jpg)
 
+For RNA extraction the flowers were disected separing flower tissue from pericarpel tissue, inmediatly the tissue were conserved in liquid nitrogen. For the extraction RNA [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) were used following the instructions of the kit.
 
-### 3. Bioinformatics
+The RNA quality assesment were performed using [bleach gel](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3699176/) and Invitrogen Qubit Fluorometric quantification and the RNA HS assay kit.
+
+The RNA were analized in Bioanalyzern by the BGI lab,
+
+---
+
+#### 3. Bioinformatics
 ![pipeline](bioinformatics_methodology.jpg)
 
-Fig. 3.
+**Fig. 3**. Trancriptomics *de novo* assambly and analysis workflow. (modified from Haas *et. al*., 2013).
 
-#### download data
+---
 
-#### 3.1. Cleaning data
+##### 3.1 download data
+
+##### 3.2. Cleaning data
 
 ##### [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
+```
+#!/bin/bash
+
+# This script is for data cleaning using trimmomatic.
+# Run this script from directory ~/bin/  and  the sequences are in ~/data/
+# Prerequisites: install trimmomatic 0.39 version
+
+# make out directory for DE data
+
+mkdir -p ../data/DE_clean
+
+
+# Clean the DE sequences with trimmomatic
+
+for i in `ls ../data/DE | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
+echo ${i}
+                     trimmomatic  PE -threads 4 ../data/DE/${i}_1.fq.gz ../data/DE/${i}_2.fq.gz \
+                          ../data/DE_clean/${i}_1P.fq.gz  ../data/DE_clean/${i}_2P.fq.gz \
+                          ../data/DE_clean/${i}_1U.fq.gz  ../data/DE_clean/${i}_1U.fq.gz \
+                          ILLUMINACLIP:../data/DE/Illumina_adapters.fa:2:40:15 MINLEN:20 SLIDINGWINDOW:4:20
+
+done
+
+```
 
 
 ##### [Trimgalore](https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md)
 
+````
+#!/bin/bash
+
+# This script is for data cleaning using trim_galore.
+# Run this script from directory ~/bin/  and  the sequences are in ~/data/secuencias/DE/
+# Prerequisites: install trim_galore 0.6.0_dev, Cutadapt 2.10
+# memory used: 4 cores
+
+
+# make out directory
+
+mkdir -p ../data/secuencias/DE/trim
+
+
+# Clean the sequences with trim_galor
+
+for i in `ls ../data/secuencias/DE | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
+
+~/TrimGalore-0.6.5/trim_galore --phred33 --fastqc -illumina --gzip --paired -o ../data/secuencias/DE/trim ../data/secuencias/DE/${i}_1.fq.gz ../data/secuencias/DE/${i}_2.fq.gz;
+
+done
+
+````
 
 
 
 
-#### 3.2. fastQC
+##### 3.3. Quality analysis of sequencing using fastQC
 
 
-#### 3.3. *De novo* assambly
+
+
+
+##### 3.4. *De novo* assambly
 
 ##### [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2)
 
+````
+#!/bin/sh
+# This script is for data assambling the transcriptome of D. eichlamii using Bridger.
+# Run this script from directory ~/bin/  and  the data is in ~/data/DE/trim/test
+# Prerequisites: install Bridger
+#bridger comand
+#$ -cwd
+#$ -j y
+#$ -V                    #export environment var
+#$ -N bridger_tDE             #name Job
+echo "************************************************************"
+echo "*********" $HOSTNAME " ****** JOB_ID=" $JOB_ID "  *************"
+echo "************************************************************"
+
+SAMPLE="/users-d1/shinojosa/Mammillaria_Illumina/Mammilaria/Trancriptoma/Disocactus"
+
+#bridger assambling
+
+Bridger.pl --seqType fq --left  ${SAMPLE}/data/DE/trim/test/DE1-2PA_1_val_1.fq --right ${SAMPLE}/data/DE/trim/test/DE1-2PA_2_val_2.fq  --output ${SAMPLE}/out/bridger_DE_trim --CPU 30 --clean -k 25
+
+
+````
+
+
 ##### [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
-
-#### 3.4. *De novo* assambly quality evaluation
-
-
-
-
-#### 3.5. Transcripst quantification
-
-##### salmon
-
-##### kallisto
-
-#### 3.6. Deseq2
-
-
-#### 3.7. Expresión clusters
