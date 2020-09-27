@@ -52,12 +52,11 @@ Three differente developmental stages of flower buds of *D. speciosus* and *D. e
 #### 2. RNA extraction and quality assesment
 
 
-For RNA extraction the flowers were disected separing flower tissue from pericarpel tissue, inmediatly the tissue was conserved in liquid nitrogen. For the extraction RNA [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) was used following the instructions of the kit.
+For RNA extraction the flowers were disected separing flower tissue from pericarpel tissue, inmediatly the tissue was conserved in liquid nitrogen. For the extraction RNA [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) was used following the instructions of the kit. every sample corresponds to a flower.
 
 The RNA quality assesment was performed using [bleach gel](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3699176/) and Invitrogen Qubit Fluorometric quantification and the RNA HS assay kit.
 
-The RNA was analized by Bioanalyzern in the BGI lab,
-
+The RNA was analized by Bioanalyzer in Beijing Genomic Institute (BGI), in order to evaluate the RNA Integrity Number (RIN). Samples with RIN values ⋝ 7 were sequenced, while samples with RIN ⋜ 7 had to be repeated.
 
 
 ![RNA-extraction](rna_extraction.jpg)
