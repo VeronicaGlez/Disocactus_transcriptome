@@ -4,13 +4,17 @@
 
 #### Background
 
-*Disocactus* is a genus conformed by epifitic and epilitic cacti.
-The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group altought it contrastan floral morphology. The
+*Disocactus* is epifitic and epilitic cacti genus.
+The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group altought it contrastan floral morphology. *Disocactus* has 13 species distribuited in Mexico and Central America. The principal features in *Disocactus* are flowers with vivid colors and diurnal anthesis. The morphologic diversity in the group can be observed in the size, color, hue, essence, number of periath segments, and shape (actinomorphic or zygomorphyc).
 
 ![phylogenie](phylogenie_morpho.jpg)
-**Fig.1.** Phylogenie of Disocactus genus and flower morphology diversity
+
+
+**Fig.1.** Phylogenie of *Disocactus* and flower morphology diversity.
 
 ![distribution](distribution.jpg)
+
+
 **Fig. 2.** Distribution of *Disocactus*
 
 
@@ -24,9 +28,11 @@ Identification of genetic expresion patterns during flower development in two *D
 
 #### Particular objectives
 
-1. Ensamble de novo y anotación de transcriptomas de dos especies del género Disocactus.
-2. Determinar y comparar los patrones de expresión génica en tejido floral (perianto, androceo y estilo-estigma) y tejido pericarpelar en cada uno de los tres estadíos de desarrollo, en dos especies de Disocactus por medio del uso de transcriptomas.
-3. Selección de genes involucrados en el desarrollo de las flores para hacer análisis de transcriptómica comparada.
+
+1. *de novo* assambly and annotation of transcriptomes from two Disocactus species.
+2. Determined and compare the genetic expression patterns in flower tissue and pericarpel tissue in every developmental stage.
+3. Selection of genes involved in flower development for comparative transcriptomic analysis.
+
 
 ---
 
@@ -37,33 +43,42 @@ ___
 
 #### 1. Material colection
 
-Three differente developmental stages of flower buds of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic cacti colection of the Botanical garden, UNAM.
+Three differente developmental stages of flower buds of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic Cacti Colection of the Botanical garden at UNAM.
 
 ![material](material.jpg)
 
 ---
 
-#### 2. RNA extraction
+#### 2. RNA extraction and quality assesment
+
+
+For RNA extraction the flowers were disected separing flower tissue from pericarpel tissue, inmediatly the tissue was conserved in liquid nitrogen. For the extraction RNA [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) was used following the instructions of the kit.
+
+The RNA quality assesment was performed using [bleach gel](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3699176/) and Invitrogen Qubit Fluorometric quantification and the RNA HS assay kit.
+
+The RNA was analized by Bioanalyzern in the BGI lab,
+
 
 
 ![RNA-extraction](rna_extraction.jpg)
 
-For RNA extraction the flowers were disected separing flower tissue from pericarpel tissue, inmediatly the tissue were conserved in liquid nitrogen. For the extraction RNA [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) were used following the instructions of the kit.
 
-The RNA quality assesment were performed using [bleach gel](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3699176/) and Invitrogen Qubit Fluorometric quantification and the RNA HS assay kit.
-
-The RNA were analized in Bioanalyzern by the BGI lab,
 
 ---
 
-#### 3. Bioinformatics
+#### 3. Bioinformatic analysis
 ![pipeline](bioinformatics_methodology.jpg)
 
 **Fig. 3**. Trancriptomics *de novo* assambly and analysis workflow. (modified from Haas *et. al*., 2013).
 
 ---
 
-##### 3.1 download data
+##### 3.1 Preprocesing data
+
+![Preprocesing](preprocessing.jpg)
+
+
+**Fig. 4.** Preprocesing data using [fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
 
 ##### 3.2. Cleaning data
 
@@ -121,10 +136,13 @@ done
 
 ````
 
+###### Trimmomatic output
+
+
+###### Trimgalore output
 
 
 
-##### 3.3. Quality analysis of sequencing using fastQC
 
 
 
