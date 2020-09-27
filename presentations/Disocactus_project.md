@@ -43,9 +43,21 @@ ___
 
 #### 1. Material colection
 
-Three differente developmental stages of flower buds of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic Cacti Colection of the Botanical garden at UNAM.
+Three differente developmental stages of flower buds of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic Cacti Colection of the Botanical garden at UNAM and from Reserva Ecologica del Pedregal de San Ángel.
 
 ![material](material.jpg)
+
+
+
+##### Table 1. flower sizes colected
+
+
+
+
+| specie/ code 	| stage 1 	| stage 2 	|           stage 3 	|
+|-	|-	|-	|-	|
+| D. eichlamii/ DE_ 	|   1 cm 	|   2.2 cm 	|  pre anthesis ( 4.6 cm aprox.) 	|
+| D. speciosus/ DS_ 	|    1 cm 	|   3 cm 	| pre anthesis (10 cm aprox.) 	|
 
 ---
 
@@ -83,6 +95,11 @@ The RNA was analized by Bioanalyzer in Beijing Genomic Institute (BGI), in order
 
 ##### [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
+**Parameters:**
+1. ILLUMINACLIP:Illumina_adapters.fa:2:30:10:2:keepBothReads
+2. HEADCROP:9
+3. MINLEN:20
+
 ```
 #!/bin/bash
 
@@ -102,54 +119,59 @@ echo ${i}
                      trimmomatic  PE -threads 4 ../data/DE/${i}_1.fq.gz ../data/DE/${i}_2.fq.gz \
                           ../data/DE_clean/${i}_1P.fq.gz  ../data/DE_clean/${i}_2P.fq.gz \
                           ../data/DE_clean/${i}_1U.fq.gz  ../data/DE_clean/${i}_1U.fq.gz \
-                          ILLUMINACLIP:../data/DE/Illumina_adapters.fa:2:40:15 MINLEN:20 SLIDINGWINDOW:4:20
-
+                          ILLUMINACLIP:../data/DE/Illumina_adapters.fa:2:30:10:2:keepBothReads HEADCROP:9 MINLEN:20
 done
 
 ```
 
 
-##### [Trimgalore](https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md)
 
-````
-#!/bin/bash
-
-# This script is for data cleaning using trim_galore.
-# Run this script from directory ~/bin/  and  the sequences are in ~/data/secuencias/DE/
-# Prerequisites: install trim_galore 0.6.0_dev, Cutadapt 2.10
-# memory used: 4 cores
-
-
-# make out directory
-
-mkdir -p ../data/secuencias/DE/trim
-
-
-# Clean the sequences with trim_galor
-
-for i in `ls ../data/secuencias/DE | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
-
-~/TrimGalore-0.6.5/trim_galore --phred33 --fastqc -illumina --gzip --paired -o ../data/secuencias/DE/trim ../data/secuencias/DE/${i}_1.fq.gz ../data/secuencias/DE/${i}_2.fq.gz;
-
-done
-
-````
 
 ###### Trimmomatic output
 
+![fastQC_out](fastq_out.jpg)
 
-###### Trimgalore output
-
-
-
+![fastQC_out](fastq_out1.jpg)
 
 
+##### Corroborate if adapters were eliminated
+
+Using the comand grep I tried to corroborate if the adapters from my data were elimated.
+
+I used the next script
 
 
+````
+#!/bin/bash
+#Script for check that adapters were removed with trimmomatic
 
+### Path to input
+DATA="../data/DE/test_6" ### Path to folder containing gz compressed fastQC files
+
+#check if adapters were removed from sequences using grep in firts 4000000 sequences
+
+
+for i in `ls $DATA | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
+echo ${i}
+
+cat $DATA/${i} | head -4000000 | grep GATCGGAAGAGCACACGTCTGAACTCCAGTCACATTCCTTTATCTCGTATGCCGTCTTCTGCTTG | wc -l
+
+
+cat $DATA/${i} | head -4000000 | grep AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT | wc -l
+
+done
+
+
+````
 ##### 3.4. *De novo* assambly
 
+
+
 ##### [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2)
+
+For the *novo assambly* I prove two different programs: [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2) and [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki). Previous comparissons with my data and the results of both programs had shown that with Bridger we obtained a better assambly than with trinity.
+
+Here I show the script used
 
 ````
 #!/bin/sh
@@ -169,10 +191,7 @@ SAMPLE="/users-d1/shinojosa/Mammillaria_Illumina/Mammilaria/Trancriptoma/Disocac
 
 #bridger assambling
 
-Bridger.pl --seqType fq --left  ${SAMPLE}/data/DE/trim/test/DE1-2PA_1_val_1.fq --right ${SAMPLE}/data/DE/trim/test/DE1-2PA_2_val_2.fq  --output ${SAMPLE}/out/bridger_DE_trim --CPU 30 --clean -k 25
+Bridger.pl --seqType fq --left  ${SAMPLE}/data/DE/trim/test/DE_cat_1.fq --right ${SAMPLE}/data/DE/trim/test/DE_cat_2.fq  --output ${SAMPLE}/out/bridger_DE_trim --CPU 30 --clean -k 25
 
 
 ````
-
-
-##### [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
