@@ -5,7 +5,7 @@
 #### Background
 
 *Disocactus* is epifitic and epilitic cacti genus.
-The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group altought it contrastan floral morphology. *Disocactus* has 13 species distribuited in Mexico and Central America. The principal features in *Disocactus* are flowers with vivid colors and diurnal anthesis. The morphologic diversity in the group can be observed in the size, color, hue, essence, number of periath segments, and shape (actinomorphic or zygomorphyc).
+The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group in spite of its contrastant floral morphology. *Disocactus* has 13 species distribuited in Mexico and Central America. The principal features in *Disocactus* are flowers with vivid colors and diurnal anthesis. The morphologic diversity in the group can be observed in the size, color, hue, essence, number of periath segments, and shape (actinomorphic or zygomorphyc).
 
 ![phylogenie](phylogenie_morpho.jpg)
 
@@ -15,7 +15,7 @@ The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/
 ![distribution](distribution.jpg)
 
 
-**Fig. 2.** Distribution of *Disocactus*
+**Fig. 2.** Geographucal distribution of *Disocactus*
 
 
 ---
@@ -24,12 +24,12 @@ The [cDNA phylogenie](https://bioone.org/journals/willdenowia/volume-46/issue-1/
 
 #### Objective
 
-Identification of genetic expresion patterns during flower development in two *Disocactus* species   and its relation with the morphologic diversity in the group.
+Identification of genetic expression patterns during flower development in two *Disocactus* species   and its relation with morphologic diversity in the group.
 
 #### Particular objectives
 
 
-1. *de novo* assambly and annotation of transcriptomes from two Disocactus species.
+1. *De novo* assambly and annotation of transcriptomes from two Disocactus species.
 2. Determined and compare the genetic expression patterns in flower tissue and pericarpel tissue in every developmental stage.
 3. Selection of genes involved in flower development for comparative transcriptomic analysis.
 
@@ -43,9 +43,11 @@ ___
 
 #### 1. Material colection
 
-Three differente developmental stages of flower buds of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic Cacti Colection of the Botanical garden at UNAM and from Reserva Ecologica del Pedregal de San Ángel.
+Flower buds of three differente developmental stages of *D. speciosus* and *D. eichlamii* were colected from plants of the Epiphytic Cacti Colection of the Botanical garden at UNAM and from Reserva Ecologica del Pedregal de San Ángel.
 
 ![material](material.jpg)
+
+**Fig. 3**. Material colected for the studie.
 
 
 
@@ -64,25 +66,24 @@ Three differente developmental stages of flower buds of *D. speciosus* and *D. e
 #### 2. RNA extraction and quality assesment
 
 
-For RNA extraction the flowers were disected separing flower tissue from pericarpel tissue, inmediatly the tissue was conserved in liquid nitrogen. For the extraction RNA [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) was used following the instructions of the kit. every sample corresponds to a flower.
+For RNA extraction the flowers were disected separating flower tissue from pericarpel tissue, inmediatly the tissue was conserved in liquid nitrogen. For the RNA extraction [the spectrum plant total RNA kit](https://www.sigmaaldrich.com/catalog/product/SIGMA/STRN50?lang=es&region=MX) was used following the kit instructions. **Note:** Each sample corresponds to a flower.
 
-The RNA quality assesment was performed using [bleach gel](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3699176/) and Invitrogen Qubit Fluorometric quantification and the RNA HS assay kit.
+The RNA quality assessment was performed using [bleach gel](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3699176/) and Invitrogen Qubit Fluorometric Quantification with the RNA HS assay kit.
 
-The RNA was analized by Bioanalyzer in Beijing Genomic Institute (BGI), in order to evaluate the RNA Integrity Number (RIN). Samples with RIN values ⋝ 7 were sequenced, while samples with RIN ⋜ 7 had to be repeated.
+The RNA was analyzed using Bioanalyzer at the Beijing Genomic Institute (BGI), in order to evaluate the RNA Integrity Number (RIN). Samples with RIN ⋝ 7 values were sequenced, while samples with RIN ⋜ 7 values had to be repeated.
 
 
 ![RNA-extraction](rna_extraction.jpg)
+
+**Fig. 4.** RNA extraction method and quality assessment.
+
+
 
 
 
 ---
 
 #### 3. Bioinformatic analysis
-![pipeline](bioinformatics_methodology.jpg)
-
-**Fig. 3**. Trancriptomics *de novo* assambly and analysis workflow. (modified from Haas *et. al*., 2013).
-
----
 
 ##### 3.1 Preprocesing data
 
@@ -133,10 +134,12 @@ done
 
 ![fastQC_out](fastq_out1.jpg)
 
+**Fig. 5.** fastQC output
 
-##### Corroborate if adapters were eliminated
 
-Using the comand grep I tried to corroborate if the adapters from my data were elimated.
+##### 3.3. Corroborate if adapters were eliminated
+
+Using the command grep I tried to corroborate if the adapters from my data were elimated.
 
 I used the next script
 
@@ -163,13 +166,23 @@ done
 
 
 ````
+
+---
+
+![pipeline](bioinformatics_methodology.jpg)
+
+**Fig. 6**. Trancriptomics *de novo* assambly and analysis workflow. (modified from Haas *et. al*., 2013).
+
+---
+
+
 ##### 3.4. *De novo* assambly
 
 
 
 ##### [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2)
 
-For the *novo assambly* I prove two different programs: [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2) and [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki). Previous comparissons with my data and the results of both programs had shown that with Bridger we obtained a better assambly than with trinity.
+For the *novo assambly* I tried two different programs: [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2) and [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) with different parameters like k-mer sizes. Previous comparissons with my data and the results of both programs showed that with Bridger we obtained a better assambly than with Trinity.
 
 Here I show the script used
 
@@ -195,3 +208,7 @@ Bridger.pl --seqType fq --left  ${SAMPLE}/data/DE/trim/test/DE_cat_1.fq --right 
 
 
 ````
+
+### Next steps
+
+Following the [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) pipeline I will carried out the next analyzes until genes annotation (Fig. 6).
