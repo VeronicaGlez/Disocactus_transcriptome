@@ -63,7 +63,7 @@ Identification of genetic expression patterns during flower development in two *
  **bin**
 
  - ```.r``` scripts
- -     ```.sh``` scripts
+ -     ```.sh```  scripts
  - the ```unused``` folder contais scripts to probe and practice finall analisys
 
 Contains:<br>
