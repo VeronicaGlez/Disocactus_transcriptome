@@ -1,0 +1,37 @@
+species,stage,flower number,tissue,Sample code,RNA-sample,Concentración(ng/ul),OD260/280,OD260/230,RIN ,28S/18S
+D. speciosus,1,9,Perianth,DS1-9PA,DS1-9PA,341,1.94,2.25,9,1.9
+D. speciosus,1,9,Pericarpel,DS1-9PC,DS1-9PC,60,1.84,2.26,7.4,1.5
+D. speciosus,1,2,Perianth,DS1-2PA,DS1-2PA,281,1.93,2.23,8.9,1.8
+D. speciosus,2,2,Pericarpel,DS1-2PC,DS1-2PC,61,1.83,1.24,8.7,2.1
+D. speciosus,2,15,Perianth,DS1-15PA,DS1-15PA,152,1.95,2,8.9,1.7
+D. speciosus,2,15,Pericarpel,DS1-15PC,DS1-15PC,88,1.91,2.09,8.9,1.7
+D. speciosus,3,2,Perianth,DS2-2PA,DS2-2PA,143,2.09,2.16,9.6,1.9
+D. speciosus,3,2,Pericarpel,DS2-2PC,DS2-2PC,72,2.05,2.08,8.7,1.6
+D. speciosus,3,7,Perianth,DS2-7PA,DS2-7PA,270,2.1,2.21,8.9,1.8
+D. speciosus,1,7,Pericarpel,DS2-7PC,DS2-7PC,86,1.95,2.02,8.3,1.6
+D. speciosus,1,14,Perianth,DS2-14PA,DS2-14PA,163,2.11,2.23,8.9,1.8
+D. speciosus,1,14,Pericarpel,DS2-14PC,DS2-14PC,78,2.04,2.05,8.6,2.1
+D. speciosus,2,14,Perianth,DS3-14PA,DS3-14PA,415,1.97,2.21,9,1.5
+D. speciosus,2,14,Pericarpel,DS3-14PC,DS3-14PC,82,1.9,1.99,8.5,1.7
+D. speciosus,2,15,Perianth,DS3-15PA,DS3-15PA,297,2.05,2.21,9.3,1.6
+D. speciosus,3,15,Pericarpel,DS3-15PC,DS3-15PC,85,1.84,1.8,8.6,2.2
+D. speciosus,3,16,Perianth,DS3-16PA,DS3-16PA,374,1.92,2.22,9.2,1.5
+D.eichlamii,3,16,Pericarpel,DS3-16PC,DS3-16PC,54,1.88,1.4,7.3,1.7
+D.eichlamii,1,14,Perianth,DE1-14PA,DE1-14PA,441,1.95,2.25,8.1,1.4
+D.eichlamii,1,14,Pericarpel,DE1-14PC,DE1-14PC,740,2,2.23,8.4,1.4
+D.eichlamii,1,10,Perianth,DE1-10PA,DE1-10PA,490,2.12,2.26,8.9,1.7
+D.eichlamii,2,10,Pericarpel,DE1-10PC,DE1-10PC,195,1.97,2.24,9.3,1.8
+D.eichlamii,2,2,Perianth,DE1-2PA,DE1-2PA,396,1.85,2.32,8.9,1.6
+D.eichlamii,2,2,Pericarpel,DE1-2PC,DE1-2PC,466,2.14,2.25,8.6,1.4
+D.eichlamii,3,1,Perianth,DE2-1PA,DE2-1PA,243,2.04,2.2,9.1,1.6
+D.eichlamii,3,1,Pericarpel,DE2-1PC,DE2-1PC,136,2.06,1.98,8.9,1.6
+D.eichlamii,3,4,Perianth,DE2-4PA,DE2-4PA,356,2.13,2.28,9,1.7
+D.eichlamii,1,4,Pericarpel,DE2-4PC,DE2-4PC,146,1.91,2.02,9.2,1.6
+D.eichlamii,1,7,Perianth,DE2-7PA,DE2-7PA,427,2,2.2,8.5,1.7
+D.eichlamii,1,7,Pericarpel,DE2-7PC,DE2-7PC,115,2.02,2.09,8.6,1.5
+D.eichlamii,2,7,Perianth,DE3-7PA,DE3-7PA,66,1.79,1.96,7.8,1.5
+D.eichlamii,2,7,Pericarpel,DE3-7PC,DE3-7PC,149,1.84,2.26,8.6,1.4
+D.eichlamii,2,8,Perianth,DE3-8PA,DE3-8PA,259,2.01,1.91,8.9,1.5
+D.eichlamii,3,8,Pericarpel,DE3-8PC,DE3-8PC,136,2.03,1.86,8.7,1.8
+D.eichlamii,3,3,Perianth,DE3-3PA,DE3-3PA,99,1.76,2.27,8.1,1.7
+D.eichlamii,3,3,Pericarpel,DE3-3PC,DE3-3PC,94,2.07,2.09,6.5,0.9
