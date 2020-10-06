@@ -94,6 +94,16 @@ Constains information about samples. <br>
 - ```Diso_code.csv```Table with information of specie names, sample names, tissue type, identification code and RNA quality information.
 
 
+**figures**
+
+In this folder you wild find figures and photografies related to de project.
+
+
+**presentations**
+
+In presentations you will find extra information about the project, like species distribution, references, RNA extraction methodology, etc.
+
+
 **out** <br>
 
 Contains results of all analysis made in the research
