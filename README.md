@@ -93,6 +93,8 @@ Constains information about samples. <br>
 
 - ```Diso_code.csv```Table with information of specie names, sample names, tissue type, identification code and RNA quality information.
 
+- ```sample_size.csv```Table with information about developmental stage and flower sizes.
+
 
 **figures**
 
@@ -101,7 +103,7 @@ In this folder you wild find figures and photografies related to de project.
 
 **presentations**
 
-In presentations you will find extra information about the project, like species distribution, references, RNA extraction methodology, etc.
+In presentations you will find ```Disocactus_project.md``` with extra information about the project, like species distribution, references, RNA extraction methodology, etc.
 
 
 **out** <br>
