@@ -14,7 +14,7 @@ In this project I used RNA-seq data from flowers buds of two different species o
 In this repository you will find RNA-seq data from cacti flower buds of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii* and scripts of  *de novo* assembly, annotation and differential expression analysis
 
 <p align="center">
-<img src="flores.jpg" width="800">
+<img src="figures/flores.jpg" width="800">
 </p>
 
 
@@ -103,19 +103,15 @@ In this folder you wild find figures and photografies related to de project.
 
 **presentations**
 
-In presentations you will find ```Disocactus_project.md``` with extra information about the project, like species distribution, references, RNA extraction methodology, etc.
+ - ```Disocactus_project.md``` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
 
 
 **out** <br>
 
 Contains results of all analysis made in the research
+<br>
+- ```tepal_sizes```  figures and tables related to cell sizes statistics analysis in different developmental stages. <br>
 
-- Assembly
-- Quality assembly evaluation
-- Quantification
-- Expression clusters
-- BUSCO
-- Gene annotation
 
 
 
