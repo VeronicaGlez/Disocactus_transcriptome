@@ -1,36 +1,31 @@
 #!/bin/bash
 
-# This script is for data cleaning using trimmomatic.
-# Run this script from directory ~/bin/  and  the sequences are in ~/data/
-# Prerequisites: install trimmomatic 0.39 version
+# This script is for data cleaning adapters using trimmomatic.
+# Run this script from directory ~/bin/  and  the sequences are in ~/data/DE
+# Prerequisites: install trimmomatic 0.32 version
+#$ -cwd
+#$ -j y
+#$ -V                    #export environment var
+#$ -N trim_DE             #name Job
+echo "************************************************************"
+echo "*********" $HOSTNAME " ****** JOB_ID=" $JOB_ID "  *************"
+echo "************************************************************"
+
+export PATH=$PATH:/soft/Trimmomatic-0.32/
 
 # make out directory for DE data
 
 mkdir -p ../data/DE_clean
 
 
-# Clean the DE sequences with trimmomatic
+# Clean the DE sequences with trimmomatic (adaptor removal, trimming of low quality bases and reads)
 
 for i in `ls ../data/DE | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
 echo ${i}
-                     trimmomatic  PE -threads 4 ../data/DE/${i}_1.fq.gz ../data/DE/${i}_2.fq.gz \
+                    java -jar /soft/Trimmomatic-0.32/trimmomatic-0.32.jar  PE -threads 8 ../data/DE/${i}_1.fq.gz ../data/DE/${i}_2.fq.gz \
                           ../data/DE_clean/${i}_1P.fq.gz  ../data/DE_clean/${i}_2P.fq.gz \
                           ../data/DE_clean/${i}_1U.fq.gz  ../data/DE_clean/${i}_1U.fq.gz \
-                          ILLUMINACLIP:../data/DE/Illumina_adapters.fa:2:40:15 MINLEN:20 SLIDINGWINDOW:4:20
-
-done
-
-# make out directory for DS Disocactus_transcriptome
-
-mkdir -p ../data/DS_clean
-
-#Clean the DS sequences with trimmomatic
-
-for i in `ls ../data/DS | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
-echo ${i}
-                     trimmomatic  PE -threads 4 ../data/DS/${i}_1.fq.gz ../data/DS/${i}_2.fq.gz \
-                          ../data/DS_clean/${i}_1P.fq.gz  ../data/DS_clean/${i}_2P.fq.gz \
-                          ../data/DS_clean/${i}_1U.fq.gz  ../data/DS_clean/${i}_1U.fq.gz \
-                          ILLUMINACLIP:../data/DE/Illumina_adapters.fa:2:40:15 MINLEN:20 SLIDINGWINDOW:4:20
+                          ILLUMINACLIP:/soft/Trimmomatic-0.32/adapters/TruSeq2-PE.fa/:2:30:10:8:keepBothReads \
+                          LEADING:20 TRAILING:20 MINLEN:40 AVGQUAL:20
 
 done
