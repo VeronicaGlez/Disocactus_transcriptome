@@ -52,6 +52,7 @@ Identification of genetic expression patterns during flower development in two *
 ##### Software
 - [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)<br>
 - [fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)<br>
+- [multiQC](https://multiqc.info/)
 - [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2)<br>
 - [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)<br>
 - [Kallisto](https://pachterlab.github.io/kallisto) <br>
@@ -75,9 +76,9 @@ Identification of genetic expression patterns during flower development in two *
 
 Contains scripts used in thise project
 
- - ```.r``` scripts
- - ```.sh```  scripts
- - the ```unused``` folder contains scripts to probe and practice finall analisys.
+ - `.r` scripts
+ - `.sh`  scripts
+
 <br>
 
 
@@ -85,15 +86,15 @@ Contains scripts used in thise project
 
 Contains al the data used in the analysis.
 
-- ```measures``` folder wich contains epidermal cell sizes organized in two different folders: 1) ```DE``` folder and 2) ```DS``` folder
+- `measures` folder wich contains epidermal cell sizes organized in two different folders: 1) `DE` folder and 2) `DS` folder
 
 **meta**<br>
 
 Constains information about samples. <br>
 
-- ```Diso_code.csv```Table with information of specie names, sample names, tissue type, identification code and RNA quality information.
+- `Diso_code.csv`Table with information of specie names, sample names, tissue type, identification code and RNA quality information.
 
-- ```sample_size.csv```Table with information about developmental stage and flower sizes.
+- `sample_size.csv`Table with information about developmental stage and flower sizes.
 
 
 **figures**
@@ -103,14 +104,14 @@ In this folder you wild find figures and photografies related to de project.
 
 **presentations**
 
- - ```Disocactus_project.md``` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
+ - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
 
 
 **out** <br>
 
 Contains results of all analysis made in the research
 <br>
-- ```tepal_sizes```  figures and tables related to cell sizes statistics analysis in different developmental stages. <br>
+- `tepal_sizes`  graphisc and tables related to cell sizes statistics analysis in different developmental stages. <br>
 
 
 
