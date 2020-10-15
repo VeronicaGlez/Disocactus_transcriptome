@@ -103,7 +103,7 @@ In this folder you will find figures and photografies related to de project.
 
 
 **[presentations](/presentations)**
-(https://github.com/IsauraRReinhold/Disocactus_transcriptome/tree/master/presentations)
+
  - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
 
 
@@ -111,7 +111,7 @@ In this folder you will find figures and photografies related to de project.
 
 Contains results of all analysis made in the research
 <br>
-- `tepal_sizes`  graphisc and tables related to cell sizes statistics analysis in different developmental stages. <br>
+- `tepal_sizes`  graphics and tables related to cell sizes statistics analysis in different developmental stages. <br>
 
 
 
