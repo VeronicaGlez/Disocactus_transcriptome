@@ -30,7 +30,7 @@ In this repository you will find RNA-seq data from cacti flower buds of two spec
 <br>
 
 ---
-#### Objective
+### Objective
 
 Identification of genetic expression patterns during flower development in two *Disocactus* species and its relation with morphologic diversity in the group.
 <br>
@@ -48,7 +48,7 @@ Identification of genetic expression patterns during flower development in two *
 <br>
 
 ---
-#### Prerequisites
+### Prerequisites
 ##### Software
 - [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)<br>
 - [fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)<br>
@@ -70,9 +70,9 @@ Identification of genetic expression patterns during flower development in two *
 
 
 ---
-#### directories
+### directories
 
- **bin**
+ **[bin](/bin)**
 
 Contains scripts used in thise project
 
@@ -84,25 +84,25 @@ Contains scripts used in thise project
 
  **data** <br>
 
-Contains al the data used in the analysis.
+Contains all the data used in the analysis.
 
 - `measures` folder wich contains epidermal cell sizes organized in two different folders: 1) `DE` folder and 2) `DS` folder
 
-**meta**<br>
+**[meta](/meta)**<br>
 
 Constains information about samples. <br>
 
-- `Diso_code.csv`Table with information of specie names, sample names, tissue type, identification code and RNA quality information.
+- `Diso_code.csv`Table with information of species names, sample names, tissue type, identification code and RNA quality information.
 
 - `sample_size.csv`Table with information about developmental stage and flower sizes.
 
 
-**figures**
+**[figures](/figures)**
 
-In this folder you wild find figures and photografies related to de project.
+In this folder you will find figures and photografies related to de project.
 
 
-**presentations**
+**[presentations](/presentations)**
 
  - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
 
@@ -111,7 +111,7 @@ In this folder you wild find figures and photografies related to de project.
 
 Contains results of all analysis made in the research
 <br>
-- `tepal_sizes`  graphisc and tables related to cell sizes statistics analysis in different developmental stages. <br>
+- `tepal_sizes`  graphics and tables related to cell sizes statistics analysis in different developmental stages. <br>
 
 
 
