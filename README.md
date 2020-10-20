@@ -6,35 +6,51 @@
 
 ## *Disocactus* background
 <br>
+<div class=text-justify>
 
 *Disocactus* is an epiphytic cacti genus, principaly distribuited in Mexico but is also present in Central America. The genus is confomerd by 13 species, with constrastant flower morphology like: color hues, sizes, variation in number of perianth elements, form (zygomorphic or actinomorphic) making *Disocactus* a model genus to studie flower diversification in cacti. [Phylogenetic studies made with cDNA](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group member of [Hylocereeae tribe](https://www.researchgate.net/publication320829990_A_phylogenetic_framework_for_the_Hylocereeae_Cactaceae_and_implications_for_the_circumscription_of_the_genera) and sister to *Epiphyllum* and *Pseudorhipsalis* genus.<br>
 <br>
 In this project I used RNA-seq data from flowers buds of two different species of *Disocactus*: *D. speciosus* and *D. eichlamii* (Fig.1).  The flowers buds were collected from The Epiphytic Cacti Collection at [UNAM Botanical Garden](http://www.ib.unam.mx/jardin/) and from the Reserva del Pedregal de San Angel [(REPSA)](http://www.repsa.unam.mx/).The samples were processed at the Botanical Garden, UNAM and the RNA was sequenced at Beiging Genomic Center [(BGI)](BGI) in Hong Kong, China.<br>
 <br>
-In this repository you will find RNA-seq data from cacti flower buds of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii* and scripts of  *de novo* assembly, annotation and differential expression analysis
+In this repository you will find RNA-seq data from cacti flower buds of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii* and scripts of  *de novo* assembly, annotation and differential expression analysis.
+
+</div>
 
 <p align="center">
 <img src="figures/flores.jpg" width="800">
 </p>
 
 
-
 <br>
+
+
 <center>
 
-**Fig. 1. flowers of *D. speciosus* and *D. eichlamii* in anthesis**. Photos by Isaura Rosas Reinhold </center>
+**Fig. 1.** flowers of *D. speciosus* and *D. eichlamii* in anthesis. Photos by Isaura Rosas Reinhold
+
+</center>
 
 
+
+
+
 <br>
-<br>
-<br>
+
 
 ---
+
+
 ### Objective
 
+<div class=text-justify>
+
 Identification of genetic expression patterns during flower development in two *Disocactus* species and its relation with morphologic diversity in the group.
-<br>
-<br>
+
+</div>
+
+
+<div class=text-justify>
+
 #### Particular objectives <br>
 
 **1.** *De novo* assembly and annotation of transcriptomes from two *Disocactus* species.
@@ -45,11 +61,15 @@ Identification of genetic expression patterns during flower development in two *
 
 **3.** Selection of genes involved in flower development for comparative transcriptomic analysis.
 
+</div>
+
 <br>
 
 ---
 ### Prerequisites
-##### Software
+
+#### Software
+
 - [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)<br>
 - [fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)<br>
 - [multiQC](https://multiqc.info/)
@@ -60,14 +80,18 @@ Identification of genetic expression patterns during flower development in two *
 - [Transdecoder](https://github.com/TransDecoder/TransDecoder/wiki)<br>
 
 
-##### R packages
+
+
+#### R packages
 - [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)<br>
 - [tidyverse](https://www.tidyverse.org/)
 <br>
 
----
-##### PC info <br>
 
+<br>
+
+---
+#### PC info <br>
 
 ---
 ### directories
@@ -107,7 +131,7 @@ In this folder you will find figures and photografies related to de project.
  - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
 
 
-**out** <br>
+**[out](/out)** <br>
 
 Contains results of all analysis made in the research
 <br>
