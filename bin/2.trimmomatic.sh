@@ -23,7 +23,7 @@ mkdir -p ../data/DE_clean
 for i in `ls ../data/DE | grep ".fq.gz" | sed "s/_1.fq.gz//"| sed "s/_2.fq.gz//" | uniq` ; do
 echo ${i}
 
-                    java -jar /soft/Trimmomatic-0.32/trimmomatic-0.32.jar PE -threads 8 -trimlog ../data/DE_clean/trimlog.txt \
+                    java -jar /soft/Trimmomatic-0.32/trimmomatic-0.32.jar PE -threads 8 -phred33 -trimlog ../data/DE_clean/trimlog.txt \
                           ../data/DE/${i}_1.fq.gz ../data/DE/${i}_2.fq.gz \
                           ../data/DE_clean/${i}_1P.fq.gz  ../data/DE_clean/${i}_1U.fq.gz \
                           ../data/DE_clean/${i}_2P.fq.gz  ../data/DE_clean/${i}_2U.fq.gz \
