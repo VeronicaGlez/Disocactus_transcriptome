@@ -57,13 +57,14 @@ The <span style="color:green">Lace</span> outputs:
 <br>
 
 
-|  <span style="color:green">Advantages</span>	| <span style="color:green">Disadvantages</span> 	|
+|  Advantagers 	|  Disadvantages 	|
 |---	|---	|
-|  Lace is that it can produce superTranscripts from any combination of transcripts and is compatible with any transcriptome assembler. 	| Lace’s running time is primarily limited by the speed of the BLAT alignments, however, for genes with a large number of transcripts, processing the splicing graph is significantly slower. 	|
-|   Accuracy of detecting heterozygous SNPs in non-model organisms using superTranscripts is similar to the detection accuracy of heterozygous SNPs from RNA-seq in model organisms. |  Lace uses only the first 50 transcripts from each gene by default. |   |
-	|  SuperTranscripts can be used in a similar way to the reference genome approach where reads are aligned to the superTranscripts instead of a reference genome.  |Constructing superTranscripts for an entire de novo assembly on eight cores takes approximately 0–8 h on a linux cluster and uses up to 4 Gb of RAM,depending on the size of the input transcriptome. |
-|   SuperTranscript methods for defining and counting reads resulted in better performance when testing for differential isoform usage. |   |   |
-|   Differential isoform usage can be detected in non-model organisms using a count-based approach, rather than inference methods, and result to be more accurate. |   |   |
+| Lace is that it can produce superTranscripts from any combination of transcripts and is compatible with any transcriptome assembler.   	|   Lace’s running time is primarily limited by the speed of the BLAT alignments, however, for genes with a large number of transcripts, processing the splicing graph is significantly slower.	|
+|  Accuracy of detecting heterozygous SNPs in non-model organisms using superTranscripts is similar to the detection accuracy of heterozygous SNPs from RNA-seq in model organisms.  	| Lace uses only the first 50 transcripts from each gene by default.  	|
+|   SuperTranscripts can be used in a similar way to the reference genome approach where reads are aligned to the superTranscripts instead of a reference genome.	| Constructing superTranscripts for an entire de novo assembly on eight cores takes approximately 0–8 h on a linux cluster and uses up to 4 Gb of RAM,depending on the size of the input transcriptome.  |
+|  SuperTranscript methods for defining and counting reads resulted in better performance when testing for differential isoform usage.  |  Differential isoform usage can be detected in non-model organisms using a count-based approach, rather than inference methods, and result to be more accurate. | 
+
+
 
 <br>
 <br>
