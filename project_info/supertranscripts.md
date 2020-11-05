@@ -110,23 +110,26 @@ from any set of transcripts including *de novo* assemblies using a python algori
 - - - -
 ## Some examples of Lace and superTrancripst applications
 
-### 1. Application of Lace and superTranscripts to non-model organisms
+### 1. Differential isoform usage in non-model organisms
 
- - Detecting variants in non-model organisms
+1. Reference genome: [DEXseq](https://bioconductor.org/packages/release/bioc/html/DEXSeq.html)
 
+2. *De novo* assembly: [kallito](https://pachterlab.github.io/kallisto/) or [Salmon](https://combine-lab.github.io/salmon/getting_started/) and [DESeq2](http://bioconductor.org/packages/release/bioc/html/DESeq2.html)
 
-
-### 2. Differential isoform usage in non-model organisms
+3. SuperTranscripts: can be used in a similar way to the reference genome.
 
 <p align="center">
-<img src="fig3.jpg" width="800">
+<img src="fig3.1.jpg" width="800">
 </p>
 
 - - -
 
-### 3. Combining reference and *de novo* assembled transcriptome
+### 2. Combining reference and *de novo* assembled transcriptome
 
-+ Using the galGal4 (chiken) genome from November 2011.
+Lace can produce superTranscripts from any source, including
+a combination of reference and *de novo* assembled transcriptomes
+
++ Using the [galGal4](https://www.ncbi.nlm.nih.gov/assembly/GCF_000002315.3/) (chiken) genome from November 2011.
 + The transcriptome in chicken gonads by using Lace to assemble SuperTranscripts.
 + Four differente transcriptomes.
 
@@ -136,21 +139,11 @@ from any set of transcripts including *de novo* assemblies using a python algori
 
 ![fig4](fig4.jpg)
 
-- - -
-
-### 4. Using SuperTranscripts in model organisms
-
-
 
 - - -
 
 
 ## Generate SuperTranscripts througth Trinity
-
-
-
-
-
 
 You can generate SuperTranscripts througth [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki/SuperTranscripts) using the next command line:
 
