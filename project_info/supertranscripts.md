@@ -44,6 +44,10 @@ For this reason in this article authors propose an alternative representation fo
 
 In spite of superTranscripts do not necessarily represent any true biological molecule, they provide a practical replacement for a reference genome.
 
+<p aligne="center">
+<img src="super.jpg" width="800">
+</p>
+
 **SuperTranscript applications:**
 
 **1.** Reads can be aligned to the superTranscriptome using a splice aware
@@ -66,7 +70,7 @@ from any set of transcripts including *de novo* assemblies using a python algori
 
  #### The Lace algorithm takes two input files:
 
-1. A set of transcript: sequences in fasta format. 
+1. A set of transcript: sequences in fasta format.
 2. A text file with the clustering information that groups each transcript into a gene or cluster.
 
 #### The Lace outputs:
@@ -76,14 +80,20 @@ from any set of transcripts including *de novo* assemblies using a python algori
 
 </div>
 
-![SuperTranscripts](supertrans.jpg)
+<p aligne="center">
+<image src="method.jpg" widht="800">
+</p>
 
 <br>
 <br>
 
 - - -
 
-|  Advantagers 	|  Disadvantages 	|
+
+**Table 1.** Advantages and disadvantages using Lace and superTrancripst
+
+
+|  Advantages 	|  Disadvantages 	|
 |---	|---	|
 | Lace can produce superTranscripts from any combination of transcripts and is **compatible with any transcriptome assembler**.   	|   Lace’s running time is primarily limited by the speed of the BLAT alignments, however, for genes with a large number of transcripts, processing the splicing graph is significantly **slower**.	|
 |  **Accuracy of detecting heterozygous** SNPs in non-model organisms using superTranscripts is similar to the detection accuracy of heterozygous SNPs from RNA-seq in model organisms.  	| Lace uses only the first 50 transcripts from each gene by default.  	|
