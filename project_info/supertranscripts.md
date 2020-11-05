@@ -1,13 +1,16 @@
 
-# <span style="color:green">SuperTranscripts: a data driven reference for analysis and visualisation of transcriptomes</span>
+# SuperTranscripts: a data driven reference for analysis and visualisation of transcriptomes
 by Nadia M. Davidson, Anthony D. K. Hawkins and Alicia Oshlack
+- - -
 
 <div class=text-justify>
 
-Numerous methods have been developed to analyse RNA sequencing (RNA-seq) data, and we
-now have robust and well established methods for RNA-seq data analysis. Most of these methods use the accurate reference genomes and annotations now available for model organisms. But for non model organisms reference genomes are not always available.
+RNA sequencing (RNA-seq) can examine expression at the gene level as well as infer
+transcript abundances and differential isoform usage. Alternative splicing can alter gene. In
+addition, RNA-seq has the power to detect variation in expressed sequence, such as single nucleotide variants, post-transcriptional editing and fusion genes. Now have robust and well established methods for RNA-seq data analysis, but most of these methods use reference genomes and annotations now
+available for model organisms.
 
-In RNA-seq most of the approaches still have been with a reference genome difficulting the work wiht non-model species.
+
 
 </div>
 
@@ -22,33 +25,54 @@ In RNA-seq most of the approaches still have been with a reference genome diffic
 
 - - -
 
-Working with epiphitic cacti RNA-seq represents a challenge, because does not exist genome of thise species. [Cacti genome only exist for columnar cacti like](https://pubmed.ncbi.nlm.nih.gov/29078296/): *Pachycereus plinglei*, *Carnegia gigantea*, *Lophocereus* and *Stenocereus* species distantly related to epiphitic cacti like *Disocactus* genus.
+But for non model organisms reference genomes are not always available, and in RNA-seq most of the approaches still have been with a reference genome difficulting the work wiht non-model species.
 
-![Carnegia](carnegia1.jpg)
+Working with epiphitic cacti RNA-seq represents a challenge, because does not exist a reference genome of these species. [Cacti genome only exist for columnar's like](https://pubmed.ncbi.nlm.nih.gov/29078296/): *Pachycereus plinglei*, *Carnegia gigantea*, *Lophocereus* and *Stenocereus*. Species distantly related to epiphitic cacti like *Disocactus* genus.
+
+<p align="center">
+<img src="carnegia2.jpg" width="800">
+</p>
 
 <br>
 
 
+- - -
 
+*De novo* assembly, is a process disegn to rebuild sequences for every expressed transcript. But many downstream analysis required a refercence genome.
 
-<div class=text-justify>
-
- The authors propose an alternative representation for each gene, which is refered as **<span style="color:purple">SuperTranscripts</span>**. SuperTranscripts contain the sequence of all exons of a gene without redundancy. They can be constructed
-from any set of transcripts including *de novo* assemblies using a python program to build them called **<span style="color:green">[Lace](https://github.com/Oshlack/Lace/wiki)</span>** which is an open source program.
+For this reason in this article authors propose an alternative representation for each gene, which is refered as **SuperTranscripts**. SuperTranscripts contains all exon sequences of a gene without redundancy and can be constructed from any set of transcrits, even *de novo* assembly.
 
 In spite of superTranscripts do not necessarily represent any true biological molecule, they provide a practical replacement for a reference genome.
 
+**SuperTranscript applications:**
+
+**1.** Reads can be aligned to the superTranscriptome using a splice aware
+aligner and subsequently visualised using standard tools
+such as [IGV](https://software.broadinstitute.org/software/igv/igvtools).
+
+**2.** Quantification can also be performed with existing software by counting the reads that overlap superTranscript features.
+
+**3.** SuperTranscripts can be used to call variants and accurately detect differential isoforms.
+
+**4.** SuperTranscripts also can be use in model organisms to identificate novel
+transcribed sequence.
+
 - - -
 
-> #### The Lace algorithm takes two input files:
->
-> 1. A set of transcript:                              sequences in fasta format.
-> 2. A text file with the clustering information that groups each transcript into a gene or > cluster.
+### Lace construct superTrancripst
 
-> #### The Lace outputs:
->
-> 1. A fasta file of superTranscript sequences.
-> 2. A gff file with their annotation.
+SuperTranscripts can be built from any set of transcripts, including de novo assembled transcripts, using an overlap assembly method. They can be constructed
+from any set of transcripts including *de novo* assemblies using a python algorithm to build them called [Lace](https://github.com/Oshlack/Lace/wiki) which is an open source program.
+
+ #### The Lace algorithm takes two input files:
+
+1. A set of transcript: sequences in fasta format. 
+2. A text file with the clustering information that groups each transcript into a gene or cluster.
+
+#### The Lace outputs:
+
+1. A fasta file of superTranscript sequences.
+2. A gff file with their annotation.
 
 </div>
 
@@ -57,6 +81,7 @@ In spite of superTranscripts do not necessarily represent any true biological mo
 <br>
 <br>
 
+- - -
 
 |  Advantagers 	|  Disadvantages 	|
 |---	|---	|
