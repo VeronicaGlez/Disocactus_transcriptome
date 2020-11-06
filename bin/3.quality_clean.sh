@@ -1,22 +1,31 @@
 #!/bin/bash
 #In order to evaluate que quality of the trimmed data I run this script
-#script to evaluate the quality of trimm_samples using fastqc
-# Run this script from directory ~/bin/  and  the raw data is in ~/data/DE_clean
+#script to evaluate the quality of trimm_samples using fastqc and multiqc
+# Run this script from directory ~/bin/  and  the raw data is in ~/data/DS_clean and ~/data/DE_clean
 
-#make out directory named DE_cleanquality
 
-mkdir -p ../out/DE_cleanquality
+## folders with clean data saved in ../data/
 
-#evaluate raw quality samples with fasqc and save the out in dir quality
+for i in DE_clean DS_clean;
+do
 
-for i in ../data/DE_clean/*.gz; do
-fastqc $i -o ../out/DE_cleanquality/
+#make out folders
+
+  mkdir -p ../data/${i}quality
+
+  for k in ../data/${i}/*.gz; do
+  echo ${k}
+
+  fastqc $k -o ../data/${i}quality/ #run fastqc in every sample saved in DE_clean and DS_clean and save the ouput in DE_clean_quality and DS_clean_quality
+
+  done
 done
 
-#made multiqc analysis in DS_quality directory
+#made multiqc analysis in DE_cleanquality and DS_cleanquality directories
 
-cd ../out/DE_cleanquality/
+for i in DE_cleanquality DS_cleanquality; do
+  echo ${i}
 
-#run multiqc analysys
+multiqc . ../data/${i}/ #run multiqc analysys inside folfers
 
-multiqc .
+done
