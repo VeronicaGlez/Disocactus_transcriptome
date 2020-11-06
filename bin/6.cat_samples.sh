@@ -1,11 +1,11 @@
 #!/bin/bash
 #Script to concatenate files
-# This script is for cat 36 samples of D. eichlamii.
-# Run this script from directory ~/bin/  and  the sequences are in ~/data/DE_clean/DE_fasta
+# This script is for cat 36 samples of D. eichlamii and 36 samples of D.speciosus
+# Run this script from directory ~/bin/  and  the sequences are in ~/data/
 #$ -cwd
 #$ -j y
 #$ -V                    #export environment var
-#$ -N cat_DE             #name Job
+#$ -N cat_DE/DS             #name Job
 echo "************************************************************"
 echo "*********" $HOSTNAME " ****** JOB_ID=" $JOB_ID "  *************"
 echo "************************************************************"
