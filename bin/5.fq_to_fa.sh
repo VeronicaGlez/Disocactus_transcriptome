@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script converts fq data to fasta format and move and save in /data/ dir.
+# This script converts fq data to fasta format and save in /data/${i}_fasta dir.
 # Run this script from directory ~/bin/ and the data are in ~/data/
 #$ -cwd
 #$ -j y
