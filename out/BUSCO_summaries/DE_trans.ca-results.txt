@@ -1,0 +1,61 @@
+Your gVolante analysis 'DE_trans' has finished.
+
+Click here to see the results.
+https://gvolante.riken.jp/script/result.cgi?202011110210-B1YMW2LFF1NY5T3G
+
+Or Input JOB ID: 202011110210-B1YMW2LFF1NY5T3G to the result page.
+https://gvolante.riken.jp/results.html
+
+
+gVolante version: 1.2.1
+
+
+Summary of the Submitted Job:
+	Job ID:    202011110210-B1YMW2LFF1NY5T3G
+	Project name:    DE_trans
+	Fasta file:    Trinity.fasta
+	Cut-off length for sequence statistics and composition:    1
+	Sequence type:    trans
+	Selected program:    BUSCO_v2/v3
+	Selected reference gene set:    Plants
+
+
+Completeness Assessment Results:    
+	Total # of core genes queried:    1440
+	# of core genes detected
+		Complete:    1267 (87.99%)
+		Complete + Partial:    1319 (91.60%)
+	# of missing core genes:    121 (8.40%)
+	Average # of orthologs per core genes:    2.60
+	% of detected core genes that have more than 1 ortholog:    87.69
+	Scores in BUSCO format:    C:88.0%[S:10.8%,D:77.2%],F:3.6%,M:8.4%,n:1440
+
+	for details of these metrics, see
+	  BUSCO: assessing genome assembly and annotation completeness with single-copy orthologs.
+	  Simao FA, Waterhouse RM, Ioannidis P, Kriventseva EV, Zdobnov EM.
+	  Bioinformatics. 2015 Oct 1;31(19):3210-2.
+
+
+Length Statistics and Composition:
+	# of sequences:    314131
+	Total length (nt):    404338351
+	Longest sequence (nt):    20089
+	Shortest sequence (nt):    201
+	Mean sequence length (nt):    1287
+	Median sequence length (nt):    792
+	N50 sequence length (nt):    2184
+	L50 sequence count:    57907
+	# of sequences >   1K (nt):    136313 (43.4% of total number)
+	# of sequences >  10K (nt):    311 (0.1% of total number)
+	# of sequences > 100K (nt):    0 (0.0% of total number)
+	# of sequences >   1M (nt):    0 (0.0% of total number)
+	# of sequences >  10M (nt):    0 (0.0% of total number)
+	Base composition (%):    A:28.91, T:28.96, G:20.98, C:21.15, N:0.00, Other:0.00
+	GC-content (%):    42.13
+	# of sequences containing non-ACGTN (nt):    0
+
+
+gVolante Citation:
+	gVolante for standardizing completeness assessment of genome and transcriptome assemblies
+	Nishimura O, Hara Y, Kuraku S.
+	Bioinformatics. 2017 Nov 15;33(22):3635-3637.

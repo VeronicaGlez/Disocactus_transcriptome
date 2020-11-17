@@ -1,0 +1,15 @@
+# BUSCO version is: 2.0.1 
+# The lineage dataset is: embryophyta_odb9 (Creation date: 2016-02-13, number of species: 30, number of BUSCOs: 1440)
+# To reproduce this run: python /home/deepseq/tool/BUSCO_v2.0.1/BUSCO.py -i Trinity.fasta.ca -o 202011130225-2UYQ7UZQW196S6XC_DS_trans -l /home/deepseq/tool/BUSCO_v2.0.1/embryophyta_odb9/ -m tran -c 32 -sp arabidopsis
+#
+# Summarized benchmarking in BUSCO notation for file Trinity.fasta.ca
+# BUSCO was run in mode: tran
+
+	C:84.7%[S:8.8%,D:75.9%],F:4.4%,M:10.9%,n:1440
+
+	1220	Complete BUSCOs (C)
+	127	Complete and single-copy BUSCOs (S)
+	1093	Complete and duplicated BUSCOs (D)
+	63	Fragmented BUSCOs (F)
+	157	Missing BUSCOs (M)
+	1440	Total BUSCO groups searched
