@@ -21,7 +21,7 @@ my_height <- 15
 my_unit <- "cm"
 
 # Colors
-my_colors <- c("#56B4E9", "#3492C7", "#F0E442", "#F04442")
+my_colors <- rev(c("#56B4E9", "#3492C7", "#F0E442", "#F04442")) #modified from the original
 # Bar height ratio
 my_bar_height <- 0.75
 
@@ -51,7 +51,7 @@ if (length(levels(my_species)) > 10){
 print("Plotting the figure ...")
 category <- c(rep(c("S","D","F","M"),c(1)))
 category <-factor(category)
-category = factor(category,levels(category)[c(4,1,2,3)])
+category = factor(category,levels(category)[rev(c(4,1,2,3))]) #modified from the original
 df = data.frame(my_species,my_percentage,my_values,category)
 
 figure <- ggplot() + 
@@ -59,11 +59,12 @@ figure <- ggplot() +
   geom_bar(aes(y = my_percentage, x = my_species, fill = category), data = df, stat="identity", width=my_bar_height) + 
   coord_flip() + 
   theme_gray(base_size = 8) + 
-  scale_y_continuous(labels = c("0","20","40","60","80","100"), breaks = c(0,20,40,60,80,100)) + 
-  scale_fill_manual(values = my_colors,labels =c(" Complete (C) and single-copy (S)  ",
-                                                 " Complete (C) and duplicated (D)",
-                                                 " Fragmented (F)  ",
-                                                 " Missing (M)")) +   
+  scale_y_continuous(labels = c("0","20","40","60","80","100"), breaks = c(0,20,40,60,80,100)) + #modified from the original
+  scale_fill_manual(values = my_colors,
+                    labels =c("S" ="Complete (C) and single-copy (S)",
+                              "D" = "Complete (C) and duplicated (D)",
+                              "F" = "Fragmented (F)",
+                              "M" = "Missing (M)")) +  
   ggtitle(my_title) + 
   xlab("") + 
   ylab("\n%BUSCOs") + 
@@ -84,7 +85,7 @@ figure <- ggplot() +
   theme(axis.title.x = element_text(family=my_family, size=rel(1.2)*my_size_ratio)) + 
   
   guides(fill = guide_legend(override.aes = list(colour = NULL))) +
-  guides(fill=guide_legend(nrow=2,byrow=TRUE))
+  guides(fill = guide_legend(reverse=T))  ### to change the order of the labels in the legend box (modified from the original)
   
   for(i in rev(c(1:length(levels(my_species))))){
     detailed_values <- my_values[my_species==my_species[my_species==levels(my_species)[i]]]
