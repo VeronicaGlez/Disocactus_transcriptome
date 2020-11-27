@@ -70,21 +70,39 @@ Identification of genetic expression patterns during flower development in two *
 
 #### Software
 
-- [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)<br>
+- [Trimmomatic v0.32](http://www.usadellab.org/cms/?page=trimmomatic)<br>
 - [fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)<br>
 - [multiQC](https://multiqc.info/)
-- [Bridger](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0596-2)<br>
-- [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)<br>
-- [Kallisto](https://pachterlab.github.io/kallisto) <br>
-- [R](https://www.r-project.org/)<br>
+- [Trinity v2.4.0](https://github.com/trinityrnaseq/trinityrnaseq/wiki)<br>
+- [Trinity v2.11.0](https://anaconda.org/bioconda/trinity)
+- [Kallisto v0.43.0](https://pachterlab.github.io/kallisto) <br>
+- [Kallisto v0.46.2](https://anaconda.org/bioconda/kallisto)
+- [R v3.6.3](https://www.r-project.org/)<br>
+- [Trinotate](https://github.com/Trinotate/Trinotate.github.io/wiki)
 - [Transdecoder](https://github.com/TransDecoder/TransDecoder/wiki)<br>
-
-
+- [BUSCO](https://busco.ezlab.org/busco_userguide.html)
 
 
 #### R packages
+
 - [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)<br>
 - [tidyverse](https://www.tidyverse.org/)
+- [ggplot2](https://ggplot2.tidyverse.org/)
+- [edgeR](https://bioconductor.org/packages/release/bioc/html/edgeR.html)
+- [PCAtools](https://bioconductor.org/packages/release/bioc/html/PCAtools.html)
+- [marray](https://www.bioconductor.org/packages/release/bioc/html/marray.html)
+- [pheatmap](https://cran.r-project.org/web/packages/pheatmap/pheatmap.pdf)
+- [tximport](https://bioconductor.org/packages/release/bioc/html/tximport.html)
+- [rhdf5](bioconductor.org/packages/release/bioc/html/rhdf5.html)
+- [dplyr]()
+- [limma](https://bioconductor.org/packages/release/bioc/html/limma.html)
+
+#### Other programs used in this research
+
+- [gVolante](https://gvolante.riken.jp/)
+- [Galaxy]()
+
+
 <br>
 
 
@@ -116,9 +134,10 @@ Contains all the data used in the analysis.
 
 Constains information about samples. <br>
 
-- `Diso_code.csv`Table with information of species names, sample names, tissue type, identification code and RNA quality information.
+- `Diso_code.csv` Table with information of species names, sample names, tissue type, identification code and RNA quality information.
 
-- `sample_size.csv`Table with information about developmental stage and flower sizes.
+- `sample_size.csv` Table with information about developmental stage and flower sizes.
+- `samples.txt` Table with information used in DE analysis
 
 
 **[figures](/figures)**
@@ -134,6 +153,8 @@ In this folder you will find figures and photografies related to de project.
 **[out](/out)** <br>
 
 Contains results of all analysis made in the research
+
+- `BUSCO_summaries` contains BUSCO out data and plot
 <br>
 - `tepal_sizes`  graphics and tables related to cell sizes statistics analysis in different developmental stages. <br>
 
