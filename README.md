@@ -150,7 +150,7 @@ Contains results of all analysis made in the research
 <br>
 - `dif_exp_DS` contains results from differential expression analysis made with edgeR for *D. speciosus* specie.
  <br>
-- `dif_exp_DE` contains results from differential expression analysis made with edgeR for *D. eichalmii* specie.
+- ` dif_exp_DE ` contains results from differential expression analysis made with edgeR for *D. eichalmii* specie.
 <br>
 
 
