@@ -145,13 +145,10 @@ In this folder you will find figures and photografies used to illustrate the pro
 Contains results of all analysis made in the research
 
 - `BUSCO_summaries` contains BUSCO out data and plot
-<br>
 - `tepal_sizes` graphics and tables related to cell sizes statistics analysis in different developmental stages.
-<br>
 - `dif_exp_DS` contains results from differential expression analysis made with edgeR for *D. speciosus* specie.
- <br>
-- ` dif_exp_DE ` contains results from differential expression analysis made with edgeR for *D. eichalmii* specie.
-<br>
+- `dif_exp_DE` contains results from differential expression analysis made with edgeR for *D. eichalmii* specie.
+
 
 
 
