@@ -1,3 +1,10 @@
+
+---
+title: "Disocactus speciosus differential expression analysis"
+author: "Isaura Rosas-Reinhold"
+date: "7/1/2021"
+---
+  
 library(ggplot2)
 library(tidyverse)
 library(edgeR)

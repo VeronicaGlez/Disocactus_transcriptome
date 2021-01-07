@@ -1,3 +1,10 @@
+
+---
+title: "Disocactus eichalmii differential expression analysis"
+author: "Isaura Rosas-Reinhold"
+date: "7/1/2021"
+---
+
 #load packages
 library(ggplot2)
 library(tidyverse)
@@ -11,6 +18,7 @@ library(SummarizedExperiment)
 library(gplots)
 source("functions.R")
 
+#The data was previously exported from kallisto out using library(tximport) and library(rhdf5)
 
 #load data
 load("../data/dif_exp_analysis/DE/counts_DE.RData")
@@ -184,7 +192,7 @@ significant.cpm
 #Heatmat to extract dendogram to get expression clusters
 
 DE_HS<- cim(t(significant.cpm), color = NULL, symkey = FALSE, row.cex = NULL,
-            col.cex = NULL)
+            col.cex = NULL, margins = c(2, 4))
 
 #plot the dendogram only 
 plot(DE_HS$ddc, leaflab="none")
@@ -221,5 +229,7 @@ plot(TreeC,
      main = "Sample Clustering D.eichlamii",
      ylab = "Height")
 
+
 sessionInfo()
+
 
