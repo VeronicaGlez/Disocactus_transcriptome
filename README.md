@@ -107,9 +107,33 @@ Identification of genetic expression patterns during flower development in two *
 
 Contains scripts used in thise project
 
- - `.r` scripts
- - `.sh`  scripts
- - `.R` functions
+**Note**
+- `.r` scripts make in Rstudio
+- `.sh`  scripts in bash leanguage
+- `.R` functions
+
+**Scripts list**
+
+- `01.data_quality_test.sh` script to check the quality of raw reads using fastQC and multiQC
+- `02.trimmomatic.sh` script to clean raw data using trimmomatic
+- `03.check_quality_clean.sh`   script to check the quality of the clean data using fastQC and multiQC
+- `04.gunzip.sh` script to unzip the clean data
+- `05.fq_to_fa.sh`  script to convert fq data to fasta format
+- `06.cat_samples.sh`  script to concatenate de fasta files
+- `07.trinity_assembly` script to make de novo assembly using Trinity
+- `08.kallisto_index.sh` script to crate de index used in kallisto analysis
+- `09.Kallisto_quant.sh`  script to quantifie using kallisto program
+- `10.DE_abun_est.sh` Script to stimate abundance in DE samples through trinity
+- `11.DS_abun_est.sh` Script to stimate abundance in DS samples through trinity
+- `12.count_expr_trans.sh` Script to count numbers of expressed transcripts in DS and DE
+- `13.plot_num_transcripts.r`   Script to plot de number of transcripts
+- `14.quality_check_samples.sh` Script for quality check samples using trinity PtR Script
+- `busco_figure.r` Script to create the BUSCO figure
+- `dif_exp_DE.r`    Script to make differencial expression (DE) analysis using edgeR in D. eichalmii
+- `dif_exp_DS.r` Script to make DE analysis using edgeR in D. speciosus
+- `functions.R` functions used in DE analysis
+- `puntos_aleatorios.r`Script to add aleatorie point in epidermal cell photos
+- `tepalos_graph.r` Script to analyze tepal cell grow in Disocactus species
 
 <br>
 
@@ -117,21 +141,24 @@ Contains scripts used in thise project
 
 Contains all the data used in the analysis.
 
+**Note**: raw data, trinity assembly, among others are not included in this repo because of the size.
+
 - `measures` folder wich contains epidermal cell sizes organized in two different folders: 1) `DE` folder and 2) `DS` folder
 
 **[meta](/meta)**<br>
 
 Constains information about samples. <br>
 
-- `Diso_code.csv` Table with information of species names, sample names, tissue type, identification code and RNA quality information.
+- `Diso_code.csv` Table with information about the RNA sequentiation. The colomn names included in the table are the following: **species** (*D. speciosus* or *D. eichlamii*),	**stage** (developmental stage from 1-3),	**flower number** (number of the flower collected),	**tissue** (type of tissue sequenced, that coud be pericarpel (PC) or perianth (PA)),	**Sample code** (code asigned to the sample),	**RNA-sample** (code for the RNA sample),	**Concentración(ng/ul)**,	**OD260/280**,	**OD260/230**,	**RIN	28S/18S** (RNA integrity number).
 
-- `sample_size.csv` Table with information about developmental stage and flower sizes.
-- `samples.txt` Table with information used in Diferencial Expression analysis
+- `sample_size.csv` Table with information about developmental stage and flower sizes collected. The colomns names included in the table are the following: **species** (species name),	**stage** (developmental stage),	**Sample code** (code use to identify the flower samples),	**flower size** (in cm).
+
+- `samples.txt` Table with information used in Diferencial Expression analysis. The table colomns names are the followin: **sample_name**, **sample_replicate_name tissue** (the name assigned for the kallisto analysis),     **tissue** (pericarpel or perianth) and    **development_stage** (from 1-3).
 
 
 **[figures](/figures)**
 
-In this folder you will find figures and photografies used to illustrate the project.
+In this folder you will find figures and photographies used to illustrate the project.
 
 
 **[project_info](/project_info)**
@@ -156,3 +183,5 @@ Contains results of all analysis made in the research
 **Credits:**
 
 * **Isaura Rosas Reinhold**
+
+**License**
