@@ -129,11 +129,11 @@ Contains scripts used in thise project
 - `13.plot_num_transcripts.r`   Script to plot de number of transcripts
 - `14.quality_check_samples.sh` Script for quality check samples using trinity PtR Script
 - `busco_figure.r` Script to create the BUSCO figure
-- `dif_exp_DE.r`    Script to make differencial expression (DE) analysis using edgeR in D. eichalmii
-- `dif_exp_DS.r` Script to make DE analysis using edgeR in D. speciosus
+- `dif_exp_DE.r`    Script to make differencial expression (DE) analysis using edgeR in D. eichalmii and create heatmaps and volcano plots
+- `dif_exp_DS.r` Script to make DE analysis using edgeR in D. speciosus and create heatmap and volcano plots
 - `functions.R` functions used in DE analysis
 - `puntos_aleatorios.r`Script to add aleatorie point in epidermal cell photos
-- `tepalos_graph.r` Script to analyze tepal cell grow in Disocactus species
+- `tepalos_graph.r` Script to analyze tepal cell grow in Disocactus species and produce graphics and statistics tables.
 
 <br>
 
@@ -164,7 +164,7 @@ In this folder you will find figures and photographies used to illustrate the pr
 **[project_info](/project_info)**
 
  - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
- - `Supertranscripts.md` contais info about supertranscripts methodology
+ - `supertranscripts.md` contais info about supertranscripts methodology
 
 
 **[out](/out)** <br>
