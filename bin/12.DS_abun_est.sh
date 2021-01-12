@@ -8,7 +8,7 @@ mkdir -p ../out/DS_exp_matrix
 
 #determine data variable
 
-data="/media/cris/Isaura/EpiDiso/out/DS_k_quants" #is where the samples are saved
+data="../out/DS_k_quants" #is where the samples are saved
 
 #run abundance estimation using trinity and kallisto output
 
