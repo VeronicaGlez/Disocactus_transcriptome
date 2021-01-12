@@ -164,7 +164,7 @@ In this folder you will find figures and photographies used to illustrate the pr
 **[project_info](/project_info)**
 
  - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
- - `Supertranscripts.md` contais info about supertranscripts methodology
+ - `supertranscripts.md` contais info about supertranscripts methodology
 
 
 **[out](/out)** <br>
