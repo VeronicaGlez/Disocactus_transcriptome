@@ -1,10 +1,4 @@
 
----
-title: "Disocactus speciosus differential expression analysis"
-author: "Isaura Rosas-Reinhold"
-date: "7/1/2021"
----
-  
 library(ggplot2)
 library(tidyverse)
 library(edgeR)
@@ -236,6 +230,7 @@ geneClust <- cutree(as.hclust(DS_HS$ddc), h=25)
 geneClust<-enframe(geneClust, name = "genes", value = "cluster")
 
 
+
 #sample clustering to identify outliers using hclust function
 
 hc <- hclust(as.dist(1-cor(significant.cpm, method="spearman")), method="complete") # Clusters columns by Spearman correlation.
@@ -246,7 +241,6 @@ plot(TreeC,
 
 
 
-sessionInfo()
 
 
 

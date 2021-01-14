@@ -1,11 +1,7 @@
 
----
-title: "Disocactus eichalmii differential expression analysis"
-author: "Isaura Rosas-Reinhold"
-date: "7/1/2021"
----
-
+  
 #load packages
+  
 library(ggplot2)
 library(tidyverse)
 library(edgeR)
@@ -34,7 +30,6 @@ counts <- as.data.frame(counts)
 
 #explore the data frame counts
 class(counts)
-
 names(counts)
 View(counts)
 
@@ -149,14 +144,21 @@ for (i in c(1:6)) {
   #seleccionar los genes que estadísticamente tienen |lfc| > 1 y robustecer nuestros resultados
   DEG.BvsA.lfc1 <- DEGResults(qlf.BvsA.lfc1)
   DEG.BvsA.lfc1 <- edgeResults(DEG.BvsA.lfc1, logfc = 1, padj = 0.05)
+  
   print(volcano_edgeR(DEG.BvsA.lfc1, lfc = 1, padj = 0.05)) #print volcano_plots
 }
 dev.off()
 
 
+#export DEG results as csv table
+write.csv(DEG.BvsA.lfc1, file = "../data/dif_exp_analysis/DE/DEG_results.csv")
+
 #Significant genes
 significant.genes <- DEG.BvsA.lfc1 %>% filter(FDR < 0.05 & logFC > 1 | FDR < 0.05 & logFC < -1)
 paste("The number of significant genes with |lfc| > 1 is", length(significant.genes$genes))
+
+#export table with significant genes
+write.csv(significant.genes, file = "../data/dif_exp_analysis/DE/significant_genes.csv")
 
 ##Heatmap of genes significant 
 ##Get names or ids from genes with differential expression
@@ -165,6 +167,9 @@ significant.ids <- significant.genes$genes
 significant.cpm <- cpm(edgeRlist_DE$counts, log = T)
 ##Cut genes with significative expression
 significant.cpm <- significant.cpm[significant.ids, ]
+
+
+View(significant.genes)
 
 ##Generate a color palette
 
@@ -228,8 +233,5 @@ TreeC = as.dendrogram(hc, method="average")
 plot(TreeC,
      main = "Sample Clustering D.eichlamii",
      ylab = "Height")
-
-
-sessionInfo()
 
 

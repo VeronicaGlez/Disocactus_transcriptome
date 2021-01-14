@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script for quality check samples using trinity PtR Script
+# Script for quality check samples using trinity PtR Script
 # Run this script from directory ~/bin/  and  the data are in ../out/${i}_exp_matrix
 
 
