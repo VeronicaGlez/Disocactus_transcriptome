@@ -6,6 +6,7 @@ library(pander)
 library(formattable)
 library(tidyr)
 
+
 # charge data from D. eichlammi specie
 int_files <- list.files("../data/measures/DE/", pattern = "int|Int")
 
@@ -71,12 +72,15 @@ Dis_eich <-rbind(ext_df, int_df)
 # D_eichlamii boxplot comparig developmental stage versus cell area in um
 # position int-ext is the position of the tepal in the perigon's flower
 
+
+
 Dis_eich %>% 
   filter(Area < 75000) %>%
-  ggplot(aes(x = estadio, y = Area, color = posicion)) +
-  geom_boxplot() +
-  ylab("Área (um)")
-    
+  ggplot(aes(x = estadio, y = Area, fill = posicion)) +
+  geom_boxplot(outlier.colour="black", outlier.size=1) +
+  xlab("Developmental stage") +
+  ylab("Cell area (um)")
+
 
 # D_eichlamii table wiht statistics data: mean and sd in md format
 
@@ -123,17 +127,27 @@ for (i in DS_int_files) {
 DS_df %>% 
   separate(Id, c("estadio", "posicion")) %>%
   filter(Area < 75000) %>%
-  ggplot(aes(x = estadio, y = Area, color = posicion)) +
-  geom_boxplot() +
-  ylab("Área (um)")
+  ggplot(aes(x = estadio, y = Area, fill = posicion)) +
+  geom_boxplot(outlier.colour = "black", outlier.size = 1) +
+  ylab("Cell area (um)") +
+  xlab("Developmental stage")
 
 
+# DS table with mean and sd
 
-# DS table with mean and ds
+Dis_esp<-separate(DS_df, col = Id, c("estadio", "posicion"), sep = "_")
+
+Dis_stats_spe <- Dis_esp %>%
+  dplyr::group_by(Area, estadio) %>%
+  summarise(media = mean(Area), sd = sd(Area))
 
 
+pander(Dis_stats_spe, style = 'rmarkdown')
+
+formattable(Dis_stats, align = c("c", "c", "c", "c"))
 
 
+sessionInfo()
 
 
 
