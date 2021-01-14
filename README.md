@@ -14,6 +14,8 @@ In this project I used RNA-seq data from flowers buds of two different species o
 <br>
 In this repository you will find RNA-seq data from cacti flower buds of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii* and scripts of  *de novo* assembly, annotation and differential expression analysis.
 
+
+
 </div>
 
 <p align="center">
@@ -57,7 +59,26 @@ Identification of genetic expression patterns during flower development in two *
 <br>
 
 ---
-### Prerequisites
+#### Data information
+
+The data used in this proejct will be uploaded when the reasearch will be finished.
+
+
+- The sequence platform used in this study was Illumina Hiseq4000
+- The samples were secuenced to 2x150PE with a depth of 20M reads per sample.
+The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RNA Integrity Number) values  ⋝ 7 were sequenced while samples with RINA values ⋜ 7 were resequenced.
+- 36 samples were sequenced. 18 for *D. echlamii* and 18 for *D. speciosus*
+- *D.eichlamii* samples are divided in two: nine correspond to pericarpel tissue and the oher nine correspond to perianth tissue.
+- *D.speciosus* samples are divided in two: nine correspond to pericarpel tissue and the oher nine correspond to perianth tissue.
+- The code use to identify the samples are the following:
+
+**NOTE**: All the samples independing if they correspond to RNA or they are anatomical samples conserved the same id code in order to facilitate the identification.
+
+
+
+
+---
+### Computational prerequisites
 
 #### Operative system
 
@@ -98,7 +119,6 @@ Identification of genetic expression patterns during flower development in two *
 - [Galaxy]()
 
 <br>
-<br>
 
 ---
 ### directories
@@ -126,7 +146,7 @@ Contains scripts used in thise project
 - `10.DE_abun_est.sh` Script to stimate abundance in DE samples through trinity
 - `11.DS_abun_est.sh` Script to stimate abundance in DS samples through trinity
 - `12.count_expr_trans.sh` Script to count numbers of expressed transcripts in DS and DE
-- `13.plot_num_transcripts.r`   Script to plot de number of transcripts
+- `13.plot_num_transcripts.r`   Script to plot de number of transcripts, which use a perl function from [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki).
 - `14.quality_check_samples.sh` Script for quality check samples using trinity PtR Script
 - `busco_figure.r` Script to create the BUSCO figure
 - `dif_exp_DE.r`    Script to make differencial expression (DE) analysis using edgeR in D. eichalmii and create heatmaps and volcano plots
@@ -143,7 +163,7 @@ Contains all the data used in the analysis.
 
 **Note**: raw data, trinity assembly, among others are not included in this repo because of the size.
 
-- `measures` folder wich contains epidermal cell sizes organized in two different folders: 1) `DE` folder and 2) `DS` folder
+- `measurements` folder wich contains epidermal cell sizes organized in two different folders: 1) `DE` folder and 2) `DS` folder
 
 **[meta](/meta)**<br>
 
