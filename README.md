@@ -3,7 +3,6 @@
 
 ---
 
-
 ## *Disocactus* background
 <br>
 <div class=text-justify>
@@ -14,12 +13,12 @@ In this project I used RNA-seq data from flowers buds of two different species o
 <br>
 In this repository you will find RNA-seq data from cacti flower buds of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii* and scripts of  *de novo* assembly, annotation and differential expression analysis.
 
-
+More details of the experiment design and lab metodology available in  [Disocactus_project.md](project_info/Disocactus_project.md).
 
 </div>
 
 <p align="center">
-<img src="figures/flores.jpg" width="800">
+<img src="project_info/flores.jpg" width="800">
 </p>
 <br>
 <center>
@@ -41,41 +40,46 @@ Identification of genetic expression patterns during flower development in two *
 
 </div>
 
-
 <div class=text-justify>
 
 #### Particular objectives <br>
 
 **1.** *De novo* assembly and annotation of transcriptomes from two *Disocactus* species.
 
-
 **2.** Determined and compare the genetic expression patterns in flower tissue and pericarpel tissue in every developmental stage.
-
 
 **3.** Selection of genes involved in flower development for comparative transcriptomic analysis.
 
 </div>
 
-<br>
-
 ---
-#### Data information
+<div class=text-justify>
 
-The data used in this proejct will be uploaded when the reasearch will be finished.
-
+### Data information
 
 - The sequence platform used in this study was Illumina Hiseq4000
-- The samples were secuenced to 2x150PE with a depth of 20M reads per sample.
+- The samples were sequenced to 2x150PE with a depth of 20M reads per sample.
 The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RNA Integrity Number) values  ⋝ 7 were sequenced while samples with RINA values ⋜ 7 were resequenced.
-- 36 samples were sequenced. 18 for *D. echlamii* and 18 for *D. speciosus*
+- In total 36 samples were sequenced: 18 for *D. echlamii* and 18 for *D. speciosus*
 - *D.eichlamii* samples are divided in two: nine correspond to pericarpel tissue and the oher nine correspond to perianth tissue.
 - *D.speciosus* samples are divided in two: nine correspond to pericarpel tissue and the oher nine correspond to perianth tissue.
 - The code use to identify the samples are the following:
 
-**NOTE**: All the samples independing if they correspond to RNA or they are anatomical samples conserved the same id code in order to facilitate the identification.
+**NOTE**:Once the research is published, all the data will be available in a data repository.
 
 
+---
+#### id code pattern
 
+All the samples independing if they correspond to RNA or they are anatomical samples have the same id code pattern in order to facilitate the identification.
+
+Inlcuir una figura para explicar el id code
+
+</div>
+
+### Workflow
+
+agregar figura con mi pipeline
 
 ---
 ### Computational prerequisites
@@ -98,7 +102,6 @@ The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RN
 - [Transdecoder v5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)<br>
 - [BUSCO v4.1.4](https://busco.ezlab.org/busco_userguide.html)
 
-
 #### R packages
 
 - [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)<br>
@@ -117,9 +120,6 @@ The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RN
 
 - [gVolante](https://gvolante.riken.jp/)
 - [Galaxy]()
-
-<br>
-
 ---
 ### directories
 
@@ -128,77 +128,138 @@ The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RN
 Contains scripts used in thise project
 
 **Note**
-- `.r` scripts make in Rstudio
+- `.r` scripts to run in Rstudio
 - `.sh`  scripts in bash leanguage
 - `.R` functions
 
 **Scripts list**
 
-- `01.data_quality_test.sh` script to check the quality of raw reads using fastQC and multiQC
-- `02.trimmomatic.sh` script to clean raw data using trimmomatic
-- `03.check_quality_clean.sh`   script to check the quality of the clean data using fastQC and multiQC
-- `04.gunzip.sh` script to unzip the clean data
-- `05.fq_to_fa.sh`  script to convert fq data to fasta format
-- `06.cat_samples.sh`  script to concatenate de fasta files
-- `07.trinity_assembly` script to make de novo assembly using Trinity
-- `08.kallisto_index.sh` script to crate de index used in kallisto analysis
-- `09.Kallisto_quant.sh`  script to quantifie using kallisto program
-- `10.DE_abun_est.sh` Script to stimate abundance in DE samples through trinity
-- `11.DS_abun_est.sh` Script to stimate abundance in DS samples through trinity
-- `12.count_expr_trans.sh` Script to count numbers of expressed transcripts in DS and DE
-- `13.plot_num_transcripts.r`   Script to plot de number of transcripts, which use a perl function from [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki).
-- `14.quality_check_samples.sh` Script for quality check samples using trinity PtR Script
-- `busco_figure.r` Script to create the BUSCO figure
-- `dif_exp_DE.r`    Script to make differencial expression (DE) analysis using edgeR in D. eichalmii and create heatmaps and volcano plots
-- `dif_exp_DS.r` Script to make DE analysis using edgeR in D. speciosus and create heatmap and volcano plots
-- `functions.R` functions used in DE analysis
-- `puntos_aleatorios.r`Script to add aleatorie point in epidermal cell photos
-- `tepalos_graph.r` Script to analyze tepal cell grow in Disocactus species and produce graphics and statistics tables.
+<div class=text-justify>
+
+- `01.data_quality_test.sh` check the quality of raw reads using fastQC and multiQC.
+- `02.trimmomatic.sh` clean raw data using trimmomatic.
+- `03.check_quality_clean.sh` check the quality of the clean data using fastQC and multiQC.
+- `04.gunzip.sh` unzip the clean data.
+- `05.fq_to_fa.sh` convert fq data to fasta format.
+- `06.cat_samples.sh` concatenate de fasta files.
+- `07.trinity_assembly.sh` make de novo assembly using Trinity.
+- `08.kallisto_index.sh` create de index used in kallisto analysis.
+- `09.Kallisto_quant.sh` quantify transcripts using kallisto.
+- `10.DE_abun_est.sh` estimate abundances in DE samples through trinity.
+- `11.DS_abun_est.sh` estimate abundances in DS samples through trinity.
+- `12.count_expr_trans.sh` plot de number of transcripts, which use a perl function from [trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki).
+- `13.plot_num_transcripts.r`plot count numbers of expressed transcripts in DS and DE.
+- `14.quality_check_samples.sh` Script for quality check samples using trinity PtR script.
+- `busco_figure.r` create the BUSCO figure.
+- `15.dif_exp_DE.r`   make differencial expression (DE) analysis using edgeR in D. eichalmii and create heatmaps and volcano plots.
+- `16.dif_exp_DS.r` make DE analysis using edgeR in D. speciosus and create heatmap and volcano plots.
+- `17.puntos_aleatorios.r` add aleatorie points in epidermal cell photos.
+- `18.tepalos_graph.r`  analyze tepal cell growth in *Disocactus* species and produce graphics and statistics tables.
+- `dif_exp_functions.R` functions used in DE analysis.
+
 
 <br>
 
  **[data](/data)** <br>
 
-Contains all the data used in the analysis.
+<div class=text-justify>
 
-**Note**: raw data, trinity assembly, among others are not included in this repo because of the size.
+- `measurements` folder has two sub folders which contais:
+  - 1) `DE` folder with 40 tables in csv format. Every table has
+ measurements of epidermal cells of tepals from *D.eichalmii*. This measurements were obtained using microphotographs of tepal epidermal cells and the [ImageJ](https://imagej.nih.gov/ij/download.html) program.
+  - 2) `DS` folder with 83 files in csv format. Every file has measurements of epidermal cells of tepals from *D.speciosus*.
 
-- `measurements` folder wich contains epidermal cell sizes organized in two different folders: 1) `DE` folder and 2) `DS` folder
+  Those files are separated because every one corresponds to a different tepal, from a different position in the flower: the position can be internal(int) or external (ext) and, from a different developmental stage (1-3). For example, the file called **Results_DS1_ext_11.csv** means: Results from *D. speciosus* developmental stage "1", tepal from external position, number of the tepal observed "11".
+
+  This measurements were obtained using microphotographs of tepal epidermal cells and the [ImageJ](https://imagej.nih.gov/ij/download.html) program.
+
+  The columns in every table are the following:
+    - **Area**	in micrometers (um).
+    - **Mean** the mean of all the measurements in the table.
+    - **StdDev** standard deviation.
+    - **Min**
+    - **Max**
+    - **Perim.** the perimeter of the cell.
+    - **Median** the "middle" of the list of numbers.
+
+
+   These data were used to obtain the graphs saved in `tepal_sizes` folder using the `tepalos_graph.r` script.
 
 **[meta](/meta)**<br>
 
-Constains information about samples. <br>
+Constains all information about samples. <br>
 
-- `Diso_code.csv` Table with information about the RNA sequentiation. The colomn names included in the table are the following: **species** (*D. speciosus* or *D. eichlamii*),	**stage** (developmental stage from 1-3),	**flower number** (number of the flower collected),	**tissue** (type of tissue sequenced, that coud be pericarpel (PC) or perianth (PA)),	**Sample code** (code asigned to the sample),	**RNA-sample** (code for the RNA sample),	**Concentración(ng/ul)**,	**OD260/280**,	**OD260/230**,	**RIN	28S/18S** (RNA integrity number).
+- `Diso_code.csv` Is a table with information about the RNA sequentiation.
+The information in the table is the following:
+ - **species** column which has the names of the species used in the research that can be *D. speciosus* or *D. eichlamii*.
+  - 	**stage** in this column is indicated with a number the developmental stage of the flower sequenced. This number can be 1, which corresponds to the smallest flower, 2 which corresponds to the intermediate flower, and 3 which correspond to the biggest flower included in the study.
+  - 	**flower_number** in this column is indicated the number of the flower collected.
+  - **tissue** in this column is indicated the type of tissue sequenced: pericarpel or perianth.
+  - **sample_code** code assigned to the flower sample collected.
+  - **RNA-sample** code assigned to the RNA sample send to sequenced.
+  - **Concentración(ng/ul)** RNA concentration in ng/ul in the sample.
+  - **OD260/280** used as a measure of purity in both DNA and RNA extractions. A 260/280 ratio of ~2.0 is generally accepted as “pure” for RNA.
+  - **OD260/230** these values indicate the purity of the nucleic acid. Expected 260/230 values are commonly in the range of 2.0-2.2.
+  - **RIN	28S/18S** (RNA integrity number). Which indicates the grade of RNA integrity, High-quality RNA will contain an RIN of at least 8, where partially fragmented RNA will contain an RIN within the range of 6–8.
 
-- `sample_size.csv` Table with information about developmental stage and flower sizes collected. The colomns names included in the table are the following: **species** (species name),	**stage** (developmental stage),	**Sample code** (code use to identify the flower samples),	**flower size** (in cm).
 
-- `samples.txt` Table with information used in Diferencial Expression analysis. The table colomns names are the followin: **sample_name**, **sample_replicate_name tissue** (the name assigned for the kallisto analysis),     **tissue** (pericarpel or perianth) and    **development_stage** (from 1-3).
+- `sample_size.csv` Table with information about developmental stage and flower sizes (cm) collected.
+
+  The information in the table is the following:
+ - **species** species name.
+ - **stage** developmental stage of the flower collected.
+ - **sample_code** code assigned to the flower sample collected.
+ - **flower_size** the size in cm of the flower collected which was used to define the developmental stage.
 
 
-**[figures](/figures)**
+- `samples.txt` Table with information used in the Diferencial Expression analysis.
 
-In this folder you will find figures and photographies used to illustrate the project.
-
+  The information in the table is the following:
+ - **sample_name** has the
+ - **sample_replicate_name**
+ - **tissue**
+ - **development_stage** developental stage, that coul be 1 to 3
 
 **[project_info](/project_info)**
 
  - `Disocactus_project.md` contains project extra information like: species distribution, samples, RNA extraction methodology, etc.
- - `supertranscripts.md` contais info about supertranscripts methodology
+ - `supertranscripts.md` contais info about supertranscripts methodology.
 
 
 **[out](/out)** <br>
 
 Contains results of all analysis made in the research
 
-- `BUSCO_summaries` contains BUSCO out data and plot
-- `tepal_sizes` graphics and tables related to cell sizes statistics analysis in different developmental stages.
-- `dif_exp_DS` contains results from differential expression analysis made with edgeR for *D. speciosus* specie.
-- `dif_exp_DE` contains results from differential expression analysis made with edgeR for *D. eichalmii* specie.
+- `BUSCO_summaries` contains BUSCO out data produce by the program and bar plot whit information about .
+
+   - `DS_trans.ca-results.txt`
+   - `DE_trans.ca-results.txt`
+   - `full_table` tow file one per species
+   - `mising_busco_list` two files one per species
+   - `short_summary` two files one per species
+   - busco_figure.png
+  >
+- `tepal_sizes` contains graphics and tables related to cell sizes statistics analysis in different developmental stages.
+   - DS_cell_growth.jpeg: *D.speciosus* graphic
+   - DE_cell_growth.jpeg: *D. eichalmii* graphics
+   - DE_statistics.jpeg and DS_statistics.jpeg contains table with:
+    - estadio:
+    - posicion:
+    - Media:
+    - sd:
+   >
+- `dif_exp_DS` contains results from differential expression analysis made with edgeR for *D. speciosus* species.
+- `dif_exp_DE` contains results from differential expression analysis made with edgeR for *D. eichalmii* species.
+
+>
+---
+
+### Discussion
+
+The results shows that
 
 
-
-
+---
 
 **Credits:**
 
