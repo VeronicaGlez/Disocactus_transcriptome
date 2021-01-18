@@ -69,13 +69,15 @@ The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RN
 
 
 ---
-#### id code pattern
+### id code pattern
 
 All the samples independing if they correspond to RNA or they are anatomical samples have the same id code pattern in order to facilitate the identification.
 
 Inlcuir una figura para explicar el id code
 
 </div>
+
+---
 
 ### Workflow
 
@@ -191,21 +193,21 @@ Constains all information about samples. <br>
 
 - `Diso_code.csv` Is a table with information about the RNA sequentiation.
 The information in the table is the following:
- - **species** column which has the names of the species used in the research that can be *D. speciosus* or *D. eichlamii*.
-  - 	**stage** in this column is indicated with a number the developmental stage of the flower sequenced. This number can be 1, which corresponds to the smallest flower, 2 which corresponds to the intermediate flower, and 3 which correspond to the biggest flower included in the study.
-  - 	**flower_number** in this column is indicated the number of the flower collected.
-  - **tissue** in this column is indicated the type of tissue sequenced: pericarpel or perianth.
-  - **sample_code** code assigned to the flower sample collected.
-  - **RNA-sample** code assigned to the RNA sample send to sequenced.
-  - **Concentración(ng/ul)** RNA concentration in ng/ul in the sample.
-  - **OD260/280** used as a measure of purity in both DNA and RNA extractions. A 260/280 ratio of ~2.0 is generally accepted as “pure” for RNA.
-  - **OD260/230** these values indicate the purity of the nucleic acid. Expected 260/230 values are commonly in the range of 2.0-2.2.
-  - **RIN	28S/18S** (RNA integrity number). Which indicates the grade of RNA integrity, High-quality RNA will contain an RIN of at least 8, where partially fragmented RNA will contain an RIN within the range of 6–8.
+
+   - **species** column which has the names of the species used in the research that can be *D. speciosus* or *D. eichlamii*.
+   - **stage** in this column is indicated with a number the developmental stage of the flower sequenced. This number can be 1, which corresponds to the smallest flower, 2 which corresponds to the intermediate flower, and 3 which correspond to the biggest flower included in the study.
+   - **flower_number** in this column is indicated the number of the flower collected.
+   - **tissue** in this column is indicated the type of tissue sequenced:  pericarpel or perianth.
+   - **sample_code** code assigned to the flower sample collected.
+   - **RNA-sample** code assigned to the RNA sample send to sequenced.
+   - **Concentración(ng/ul)** RNA concentration in ng/ul in the sample.
+   - **OD260/280** used as a measure of purity in both DNA and RNA extractions. A 260/280 ratio of ~2.0 is generally accepted as “pure” for RNA.
+   - **OD260/230** these values indicate the purity of the nucleic acid. Expected 260/230 values are commonly in the range of 2.0-2.2.
+   - **RIN	28S/18S** (RNA integrity number). Which indicates the grade of RNA integrity, High-quality RNA will contain an RIN of at least 8, where partially fragmented RNA will contain an RIN within the range of 6–8.
 
 
 - `sample_size.csv` Table with information about developmental stage and flower sizes (cm) collected.
-
-  The information in the table is the following:
+The information in the table is the following:
  - **species** species name.
  - **stage** developmental stage of the flower collected.
  - **sample_code** code assigned to the flower sample collected.
@@ -213,8 +215,7 @@ The information in the table is the following:
 
 
 - `samples.txt` Table with information used in the Diferencial Expression analysis.
-
-  The information in the table is the following:
+The information in the table is the following:
  - **sample_name** has the
  - **sample_replicate_name**
  - **tissue**
