@@ -207,7 +207,6 @@ The information in the table is the following:
 
 
 - `sample_size.csv` Table with information about developmental stage and flower sizes (cm) collected. The information in the table is the following:
-
   - **species** species name.
  - **stage** developmental stage of the flower collected.
  - **sample_code** code assigned to the flower sample collected.
@@ -216,7 +215,6 @@ The information in the table is the following:
 
 - `samples.txt` Table with information used in the Diferencial Expression analysis.
 The information in the table is the following:
-
  - **sample_name**
  - **sample_replicate_name**
  - **tissue**
