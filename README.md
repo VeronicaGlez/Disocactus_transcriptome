@@ -191,7 +191,7 @@ Contains scripts used in thise project
 
 Constains all information about samples. <br>
 
-- `Diso_code.csv` Is a table with information about the RNA sequentiation.
+- `Diso_code.csv` table with information about the RNA sequentiation.
 The information in the table is the following:
 
    - **species** column which has the names of the species used in the research that can be *D. speciosus* or *D. eichlamii*.
@@ -206,9 +206,9 @@ The information in the table is the following:
    - **RIN	28S/18S** (RNA integrity number). Which indicates the grade of RNA integrity, High-quality RNA will contain an RIN of at least 8, where partially fragmented RNA will contain an RIN within the range of 6–8.
 
 
-- `sample_size.csv` Table with information about developmental stage and flower sizes (cm) collected.
-The information in the table is the following:
- - **species** species name.
+- `sample_size.csv` Table with information about developmental stage and flower sizes (cm) collected. The information in the table is the following:
+
+  - **species** species name.
  - **stage** developmental stage of the flower collected.
  - **sample_code** code assigned to the flower sample collected.
  - **flower_size** the size in cm of the flower collected which was used to define the developmental stage.
@@ -216,7 +216,8 @@ The information in the table is the following:
 
 - `samples.txt` Table with information used in the Diferencial Expression analysis.
 The information in the table is the following:
- - **sample_name** has the
+
+ - **sample_name**
  - **sample_replicate_name**
  - **tissue**
  - **development_stage** developental stage, that coul be 1 to 3
