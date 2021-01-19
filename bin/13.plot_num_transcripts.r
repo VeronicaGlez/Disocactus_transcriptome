@@ -22,4 +22,4 @@ jpeg('../out/DS_exp_matrix/DS_num_trans.jpg')
 plot(data, xlim=c(-100,0), ylim=c(0,100000), t='b')
 dev.off()
 
-setwd()
+sessionInfo()
