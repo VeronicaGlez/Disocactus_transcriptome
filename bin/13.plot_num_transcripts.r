@@ -22,4 +22,8 @@ jpeg('../out/DS_exp_matrix/DS_num_trans.jpg')
 plot(data, xlim=c(-100,0), ylim=c(0,100000), t='b')
 dev.off()
 
+<<<<<<< HEAD
 sessionInfo()
+=======
+
+>>>>>>> 192a0847d560f1ff29319c0a26c9825e8ebf0b7e
