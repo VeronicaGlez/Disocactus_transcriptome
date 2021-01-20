@@ -18,7 +18,7 @@ source("functions.R")
 
 #set workdir
 
-setwd("~/Diso_project/bin")
+setwd("~/Documentos/EpiDiso/Disocactus_transcriptome/bin")
 
 #Charge data
 load("../data/dif_exp_analysis/DS/counts_DS.RData")

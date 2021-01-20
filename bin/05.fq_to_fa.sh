@@ -15,11 +15,11 @@ mkdir -p ../data/DE_fasta/
 
 mkdir -p ../data/DS_fasta/
 
-#loop convert fq files in fasta files
+#loop convert fq files into fasta files
 
   for i in DE DS; do #folders with fq samples
 
-  for k in `ls ../data/${i}_clean/ | grep "P.fq" | sed "s/_1P.fq//"| sed "s/_2P.fq//" | uniq` ;  do ## tienes que agregar un sed antes de uniq para quitar .fq
+  for k in `ls ../data/${i}_clean/ | grep "P.fq" | sed "s/_1P.fq//"| sed "s/_2P.fq//" | uniq` ;  do ## you have to add a sed before uniq to remove .fq
   echo ${k}
 
   sed -n '1~4s/^@/>/p;2~4p' ../data/${i}_clean/${k}_1P.fq > ${k}_1P.fasta #convert 1P.fq to 1P.fasta

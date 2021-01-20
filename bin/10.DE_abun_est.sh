@@ -1,6 +1,7 @@
 #!/bin/sh
 #Script to estimate abundance of D. eichlamii using trinity
 # Run this script from directory ~/bin/  and  the sequences they are in ~/out/DE_k_quants
+# Prerequisite: Trinity
 
 #make out diretory
 

@@ -12,7 +12,7 @@
 #Run this script from directory ~/bin/ and the data are in ~/out/BUSCO_summaries/
 
 #set working dir
-setwd("~/bin")
+setwd("~/Documentos/EpiDiso/Disocactus_transcriptome/bin")
 
 # Load the required libraries
 library(ggplot2)

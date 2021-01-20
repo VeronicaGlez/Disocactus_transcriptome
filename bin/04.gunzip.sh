@@ -12,7 +12,7 @@ echo "************************************************************"
 
 
 # loop to decompress all samples in DE_clean/DS_clean
-#folders with fq.gz data clean
+# folders with fq.gz data clean
 
 for i in DE_clean DS_clean; do
 

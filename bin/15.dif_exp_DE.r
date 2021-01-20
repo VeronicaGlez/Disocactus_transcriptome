@@ -20,7 +20,7 @@ source("functions.R")
 
 #set workdir
 
-setwd("~/Diso_project/bin")
+setwd("~/Documentos/EpiDiso/Disocactus_transcriptome/bin")
 
 #The data was previously exported from kallisto out using library(tximport) and library(rhdf5)
 #load data

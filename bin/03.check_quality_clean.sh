@@ -1,8 +1,8 @@
 #!/bin/bash
-#In order to evaluate que quality of the trimmed data run this script
-#script to evaluate the quality of trimm_samples using fastqc
-# Run this script from directory ~/bin/  and  the raw data is in ~/data/
-
+# In order to evaluate que quality of the trimmed data run this script
+# script to evaluate the quality of trimm_samples using fastqQC and multiQC
+# Run this script from directory ~/bin/  and  the raw data are saved in ~/data/
+# Prerequisites: fastQC and multiQC
 
 for i in DE DS; do
 
@@ -23,7 +23,7 @@ done
 
 for i in DE DS; do
 
-multiqc . ../data/${i}_cleanquality/ #run multiqc analysys inside folders
+multiqc . ../data/${i}_cleanquality/ #run multiqc analysis inside folders
 
 done
 

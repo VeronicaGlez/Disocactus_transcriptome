@@ -1,6 +1,7 @@
 #Script to quant samples of D. eichlamii and D.speciosus using Kallisto
 
 # Run this script from directory ~/bin/  and  the sequences they are in ~/data/DE_clean and ~/data/DS_clean
+#Prerequisite: kallisto 0.43.0
 #Kallisto comand
 #!/bin/sh
 #$ -cwd
@@ -27,3 +28,7 @@ kallisto quant -i ../out/${i}_Trinity_clean/trinity_${i}.idx -o ../out/${i}_k_qu
 
 done
  done
+ 
+ 
+
+
