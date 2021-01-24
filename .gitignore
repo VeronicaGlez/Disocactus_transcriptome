@@ -3,4 +3,6 @@ out/*
 bin/Kalquant_eic.o581288
 bin/Kalquant_eic.o581291
 bin/Kalquant_eic.o581310
-
+bin/.Rhistory
+bin/.RData
+bin/.ipynb_checkpoints
