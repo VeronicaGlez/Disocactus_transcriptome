@@ -7,13 +7,13 @@
 <br>
 <div class=text-justify>
 
-*Disocactus* is an epiphytic cacti genus, mainly distribuited in Mexico, but is also spread in Central America. The genus is composed by 13 species, with constrastant flower morphology like: color hues, sizes, variation in number of perianth elements, and form (zygomorphic or actinomorphic). This characteristics make *Disocactus* a model genus to study flower diversification in epiphytic cacti. [Phylogenetic studies made with cDNA](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) had shown that *Disocactus* is a monophyletic group member of [Hylocereeae tribe](https://www.researchgate.net/publication320829990_A_phylogenetic_framework_for_the_Hylocereeae_Cactaceae_and_implications_for_the_circumscription_of_the_genera) and sister to *Epiphyllum* and *Pseudorhipsalis* genus.<br>
+*Disocactus* is an epiphytic cacti genus, mainly distribuited in Mexico, also spread in Central America. The genus is composed by 13 species with constrastant flower morphology like: color hues, sizes, variation in number of perianth elements, and form (zygomorphic or actinomorphic). This characteristics make *Disocactus* a model genus for studing flower diversification in epiphytic cacti. [Phylogenetic studies made with cDNA](https://bioone.org/journals/willdenowia/volume-46/issue-1/wi.46.46112/Molecular-phylogeny-and-taxonomy-of-the-genus-iDisocactus-i-iCactaceae/10.3372/wi.46.46112.full) have shown that *Disocactus* is a monophyletic group member of [Hylocereeae tribe](https://www.researchgate.net/publication320829990_A_phylogenetic_framework_for_the_Hylocereeae_Cactaceae_and_implications_for_the_circumscription_of_the_genera) and sister to *Epiphyllum* and *Pseudorhipsalis* genus.<br>
 <br>
-In this project I used RNA-seq data from flowers buds of two different species of *Disocactus*: *D. speciosus* and *D. eichlamii* (Fig.1).  The flowers buds were collected from The Epiphytic Cacti Collection at [UNAM Botanical Garden](http://www.ib.unam.mx/jardin/) and from the Reserva del Pedregal de San Angel [(REPSA)](http://www.repsa.unam.mx/).The samples were processed at the Botanical Garden, UNAM and the RNA was sequenced at Beiging Genomic Center [(BGI)](BGI) in Hong Kong, China. Most of the bioinformatic analysis were made through Hercules cluster in Barcelona, Spain. <br>
+In this project I used RNA-seq data from flower buds of two different species of *Disocactus*: *D. speciosus* and *D. eichlamii* (Fig.1).  The flower buds were collected from the epiphytic cacti collection at the [UNAM Botanical Garden](http://www.ib.unam.mx/jardin/) and from the Reserva del Pedregal de San Angel [(REPSA)](http://www.repsa.unam.mx/). The samples were processed at the Botanical Garden and the RNA was sequenced at Beiging Genomic Center [(BGI)](BGI) in Hong Kong, China. Most of the bioinformatic analysis were made through Hercules cluster in Barcelona, Spain. <br>
 <br>
-In this repository you will find RNA-seq data from cacti flower buds of two species *Disocactus* genus: *D. speciosus* and *D. eichlamii* and scripts of  *de novo* assembly, annotation and differential expression analysis.
+In this repository you will find RNA-seq data from cacti flower buds of two *Disocactus* species: *D. speciosus* and *D. eichlamii*, as well as *de novo* assembly, annotation and differential expression analysis scripts.
 
-More details of the experiment design and lab metodology available in  [Disocactus_project.md](project_info/Disocactus_project.md).
+More details of the experiment design and lab methodology available in  [Disocactus_project.md](project_info/Disocactus_project.md).
 
 </div>
 
@@ -46,7 +46,7 @@ Identification of genetic expression patterns during flower development in two *
 
 **1.** *De novo* assembly and annotation of transcriptomes from two *Disocactus* species.
 
-**2.** Determined and compare the genetic expression patterns in flower tissue and pericarpel tissue in every developmental stage.
+**2.** Determine and compare the genetic expression patterns in flower tissue and pericarpel tissue in every development stage.
 
 **3.** Selection of genes involved in flower development for comparative transcriptomic analysis.
 
@@ -57,9 +57,9 @@ Identification of genetic expression patterns during flower development in two *
 
 ### Data information
 
-- The sequence platform used in this study was Illumina Hiseq4000
+- The sequence platform used in this study was Illumina Hiseq4000.
 - The samples were sequenced to 2x150PE with a depth of 20M reads per sample.
-The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RNA Integrity Number) values  ⋝ 7 were sequenced while samples with RINA values ⋜ 7 were resequenced.
+- The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RNA Integrity Number) values  ⋝ 7 were sequenced while samples with RINA values ⋜ 7 were resequenced.
 - In total 36 samples were sequenced: 18 for *D. echlamii* and 18 for *D. speciosus*
 - *D.eichlamii* samples are divided in two: nine correspond to pericarpel tissue (PC) and the oher nine correspond to perianth tissue (PA).
 - *D.speciosus* samples are divided in two: nine correspond to pericarpel tissue (PC) and the oher nine correspond to perianth tissue (PA).
@@ -78,8 +78,8 @@ The quality of the samples were evaluated with bioanalyzer. Samples with RIN (RN
 
 <div class=text-justify>
 
-**Fig. 2.** Code pattern following in all samples in the project.
-The first two letters correspond to the species code, in this case *D. echlammi* code is **DE** and *D. speciosus* code is **DS**. The next number corresponds to the stage of development, it can be from 1 to 3. The next two numbers mean the flower number collection. Finally, the last two letters correspond to the type of tissue, it can be perianth identified with a **PA** or pericarpel identified with a **PC**. All the samples independing if they correspond to RNA or they are anatomical samples have the same id code pattern in order to facilitate the identification
+**Fig. 2.** Code pattern followed in all samples of the project.
+The first two letters correspond to the species code, *D. echlammi* code is **DE** and *D. speciosus* code is **DS**. The next number corresponds to the development stage of the flower, three stages in total. The next two digits mean the flower collection number. Finally, the last two letters correspond to the type of tissue, perianth identified with a **PA** or pericarpel identified with a **PC**.
 
 </div>
 
@@ -93,7 +93,8 @@ The first two letters correspond to the species code, in this case *D. echlammi*
 
 <div class=text-justify>
 
-**Fig. 3.** Workflow following in the project. From top to bottom is enlisted the Workflow following during the project, on the right are the are the sofware used in every step of the pipeline. On the left are the type of files used during the process.
+**Fig. 3.** Workflow followed in the project.
+
 
 <div>
 
@@ -138,7 +139,7 @@ The first two letters correspond to the species code, in this case *D. echlammi*
 - [gVolante](https://gvolante.riken.jp/)
 - [Galaxy]()
 ---
-### directories
+### Directories
 
  **[bin](/bin)**
 
@@ -185,11 +186,11 @@ Contains scripts used in thise project
 <div class=text-justify>
 
 - `measurements` folder has two sub folders which contais:
-  - 1) `DE` folder with 40 tables in csv format. Every table has
+  - 1) `DE` folder contains 40 tables in csv format. Every table has
  measurements of epidermal cells of tepals from *D.eichalmii*. This measurements were obtained using microphotographs of tepal epidermal cells and the [ImageJ](https://imagej.nih.gov/ij/download.html) program.
-  - 2) `DS` folder with 83 files in csv format. Every file has measurements of epidermal cells of tepals from *D.speciosus*.
+  - 2) `DS` folder contains 83 files in csv format. Every file has measurements of epidermal cells of tepals from *D.speciosus*.
 
-  Those files are separated because every one corresponds to a different tepal, from a different position in the flower: the position can be internal(int) or external (ext) and, from a different developmental stage (1-3). For example, the file called **Results_DS1_ext_11.csv** means: Results from *D. speciosus* developmental stage "1", tepal from external position, number of the tepal observed "11".
+  These files are separated because each one corresponds to a different tepal from a different position in the flower: the position can be internal(int) or external (ext) and from different stage development (1-3). For example, the file called **Results_DS1_ext_11.csv** means: Results from *D. speciosus* tepal stage development "1" from external position, observed tepal number "11".
 
   This measurements were obtained using microphotographs of tepal epidermal cells and the [ImageJ](https://imagej.nih.gov/ij/download.html) program.
 
@@ -206,15 +207,15 @@ Contains scripts used in thise project
 
 **[meta](/meta)**<br>
 
-Constains all information about samples. <br>
+Contains all information about samples. <br>
 
 - `Diso_code.csv` table with information about the RNA sequentiation.
 The information in the table is the following:
 
-   - **species** column which has the names of the species used in the research that can be *D. speciosus* or *D. eichlamii*.
-   - **stage** in this column is indicated with a number the developmental stage of the flower sequenced. This number can be 1, which corresponds to the smallest flower, 2 which corresponds to the intermediate flower, and 3 which correspond to the biggest flower included in the study.
-   - **flower_number** in this column is indicated the number of the flower collected.
-   - **tissue** in this column is indicated the type of tissue sequenced:  pericarpel or perianth.
+   - **species** column indicating species name used in the research that can be *D. speciosus* or *D. eichlamii*.
+   - **stage** column indicating stage development with a number for flower sequenced. This number can be 1 which corresponds to the smallest flower, 2 which corresponds to the intermediate flower and 3 which corresponds to the biggest flower included in the study.
+   - **flower_number** this column indicates flower collection number.
+   - **tissue** this column indicates the type of tissue sequenced:  pericarpel or perianth.
    - **sample_code** code assigned to the flower sample collected.
    - **RNA-sample** code assigned to the RNA sample send to sequenced.
    - **Concentración(ng/ul)** RNA concentration in ng/ul in the sample.
@@ -223,44 +224,44 @@ The information in the table is the following:
    - **RIN	28S/18S** (RNA integrity number). Which indicates the grade of RNA integrity, High-quality RNA will contain an RIN of at least 8, where partially fragmented RNA will contain an RIN within the range of 6–8.
 
 
-- `sample_size.csv` Table with information about developmental stage and flower sizes (cm) collected. The information in the table is the following:
+- `sample_size.csv` Table with information about stage development and flower sizes (cm) collected. The information in the table is as follows:
   - **species** species name.
-  - **stage** developmental stage of the flower collected.
+  - **stage** stage development of the flower collected.
   - **sample_code** code assigned to the flower sample collected.
-  - **flower_size** the size in cm of the flower collected which was used to define the developmental stage.
+  - **flower_size** the size in cm of the flower collected which was used to define the stage development.
 
 
 - `samples.txt` Table with information used in the Diferencial Expression analysis.
-The information in the table is the following:
-  - **sample_name** In this table sample name contains only the species code, the stage of development and the type of tissue.
-  - **sample_replicate_name** contains the folder name were is saved count information. The first part follows the id code explained below and the second part "_K_quant" is the name added by kallisto.
+The information in the table is as follows:
+  - **sample_name** contains only the species code, development stage and  tissue type.
+  - **sample_replicate_name** contains the folder name wherec counts information is saved.
   - **tissue** contains information about tissue.
   - **development_stage** contains the stage of development associated to the sample.
 
 **[project_info](/project_info)**
 
- - [Disocactus_project.md](/project_info/Disocactus_project.md) contains project extra information like: species distribution, quality samples, RNA extraction methodology, sampling methodology, etc.
- - [supertranscripts.md](/project_info/supertranscripts.md) contains info about supertranscripts methodology.
+ - [Disocactus_project.md](/project_info/Disocactus_project.md) contains  extra project information like: species distribution, quality samples, RNA extraction methodology, sampling methodology, etc.
+ - [supertranscripts.md](/project_info/supertranscripts.md) contains information about supertranscripts methodology.
  - [summary.md](/project_info/summary.md) contains a breif discussion about the project progress made during the last months.
 
 
 **[out](/out)** <br>
 
-Contains results of all analysis made in the research
+Contains results of all analysis made in the research.
 
 - `BUSCO_summaries` contains BUSCO out data produce by the program and bar plot whit information about .
 
-   - `DS_trans.ca-results.txt` Contains summary of the submitted job; completeness assessment results,and length statistics and composition. Information from gVolante.
-   - `DE_trans.ca-results.txt` Contains summary of the submitted job; completeness assessment results,and length statistics and composition. Information from gVolante.
-   - `full_table` Contains the complete results in a tabular format with scores and lengths of BUSCO matches, and coordinates (for genome mode) or gene/protein IDs (for transcriptome or protein mode).
+   - `DS_trans.ca-results.txt` Contains summary of the submitted job; completeness assessment results, length statistics and composition. Information from gVolante.
+   - `DE_trans.ca-results.txt` Contains summary of the submitted job; completeness assessment results, length statistics and composition. Information from gVolante.
+   - `full_table` Contains the complete results in a tabular format with scores and lengths of BUSCO matches and coordinates (for genome mode) or gene/protein IDs (for transcriptome or protein mode).
    - `mising_busco_list` Contains a list of missing BUSCOs, one per species.
    - `short_summary` Contains a plain text summary of the results in BUSCO notation, one per species.
    - busco_figure.png in graphical form contains information about BUSCO assesment results.
 
   <br>
-- `tepal_sizes` contains graphics and tables related to cell sizes statistics analysis in different developmental stages.
-   - DS_cell_growth.jpeg: *D.speciosus* graphic
-   - DE_cell_growth.jpeg: *D. eichalmii* graphics
+- `tepal_sizes` contains graphics and tables related to cell sizes and statistics analysis in different developmental stages.
+   - DS_cell_growth.jpeg: *D.speciosus* box-plot graphic
+   - DE_cell_growth.jpeg: *D. eichalmii* box-plot graphic
    - DE_statistics.jpeg table with media an standard deviation
    - DS_statistics.jpeg table with media an standard deviation
 
